@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+	xmlns:media="http://search.yahoo.com/mrss/"
+>
+
+  <channel>
+    <generator>RSS Builder by B!Soft</generator>
+    <title>Apocalipse2000 - Podcasts</title>
+	<atom:link href="http://www.apocalipse2000.com.br/podcast.xml" rel="self" type="application/rss+xml" />
+    <link>http://www.apocalipse2000.com.br/</link>
+    <description>Podcasts do website apocalipse2000.com.br - 06/06/00</description>
+    <language>pt-br</language>
+    <copyright>Copyright 2008 Apocalipse2000</copyright>
+    <image>
+      <title>Apocalipse2000 - Podcasts</title>
+      <link>http://www.apocalipse2000.com.br/</link>
+      <url>http://www.apocalipse2000.com.br/images/fundo-rss.jpg</url>
+      <width>140</width>
+      <height>140</height>
+    </image>
+	
+	    <item>
+      <title>O Diário de Maria</title>
+      <pubDate>Mon, 12 Mar 2012 09:06:26 -0200</pubDate>
+      <link>http://www.apocalipse2000.com.br/podcast13.htm</link>
+      <category>Podcast</category>
+      <enclosure url="http://www.apocalipse2000.com.br/podcast/apocalipse2000-podcast-13.mp3" length="49266971" type="audio/mpeg" />
+	  <guid isPermaLink="false">http://wwwapocalipse2000.com.br/podcast13.htm</guid>
+      <description><![CDATA[Continuando a sequência de histórias de terror, gravamos em formato de podcast o mais famoso e popular conto do site: O Diário de Maria. A história das quatro amigas que viajam para New Orleans e relatam os acontecimentos sobrenaturais fez tanto sucesso que resolvemos gravá-la com efeitos, trilha sonora assustadora e um novo final, inédito, que só aparecerá nesse podcast.]]></description>
+    </item>
+	
+    <item>
+      <title>Contos de Terror</title>
+      <pubDate>Fri, 11 Nov 2011 10:04:26 -0200</pubDate>
+      <link>http://www.apocalipse2000.com.br/podcast11.htm</link>
+      <category>Podcast</category>
+      <enclosure url="http://www.apocalipse2000.com.br/podcast/apocalipse2000-podcast-11.mp3" length="20254239" type="audio/mpeg" />
+	  <guid isPermaLink="false">http://wwwapocalipse2000.com.br/podcast11.htm</guid>
+      <description><![CDATA[Nos últimos tempos temos contado diversas histórias de terror em alguns podcasts e os ouvintes tem gostado da forma que as histórias foram contadas. Por isso, resolvemos fazer um podcast só com contos de terror mais assustadores do Apocalipse2000.]]></description>
+    </item>
+    <item>
+      <title>13 anos do Apocalipse2000</title>
+      <pubDate>Fri, 11 Nov 2011 10:04:26 -0200</pubDate>
+      <link>http://www.apocalipse2000.com.br/podcast09.htm</link>
+      <category>Podcast</category>
+      <enclosure url="http://www.apocalipse2000.com.br/podcast/apocalipse2000-podcast-09.mp3" length="42228801" type="audio/mpeg" />
+	  <guid isPermaLink="false">http://wwwapocalipse2000.com.br/podcast09.htm</guid>
+      <description><![CDATA[No dia 15 de outubro de 2011 o Apocalipse2000 completa 13 anos de existência, e quem granha o presente é o nosso leitor. Lançamos o podcast comemorativo com histórias sobre o site, mensagens dos ouvintes, de parceiros e um presente para o ouvinte no final do podcast.]]></description>
+    </item>
+    <item>
+      <title>Nerds de Vestido</title>
+      <pubDate>Fri, 11 Nov 2011 10:04:02 -0200</pubDate>
+      <link>http://www.apocalipse2000.com.br/podcast07.htm</link>
+      <category>Podcast</category>
+      <enclosure url="http://www.apocalipse2000.com.br/podcast/apocalipse2000-podcast-07.mp3" length="36838255" type="audio/mpeg" />
+	  <guid isPermaLink="false">http://wwwapocalipse2000.com.br/podcast07.htm</guid>
+      <description><![CDATA[Batemos um papo muito divertido e assustador com as meninas do blog Nerds de Vestido. Foi uma conversa muito interessante sobre o blog, jogos e filmes de terror. Mas quando elas resolvem contar histórias assustadoras... Elas sabem como deixar as pessoas com medo. ]]></description>
+    </item>
+    <item>
+      <title>Entrevista - Jucelino da Luz</title>
+      <pubDate>Fri, 11 Nov 2011 10:01:51 -0300</pubDate>
+      <link>http://www.apocalipse2000.com.br/podcast06.htm</link>
+      <category>Podcast</category>
+      <enclosure url="http://www.apocalipse2000.com.br/podcast/apocalipse2000-podcast-06.mp3" length="43453004" type="audio/mpeg" />
+	  <guid isPermaLink="false">http://wwwapocalipse2000.com.br/podcast06.htm</guid>
+      <description><![CDATA[Gravamos uma entrevista exclusiva com Jucelino da Luz, o homem que afirma ter sonhos premonitórios detalhados de tragédias e envia cartas para os envolvidos. Suas cartas ficaram famosas citarem acidentes aéreos e morte de pessoas famosas.
+
+Nessa conversa, ele conta como começaram as visões, suas previsões sobre os acidentes aéreos, a captura de Saddam Hussein, a morte de Michael Jackson e até a candidatura de Tiririca, além de  revelações para o futuro, como o resultado do final da copa do mundo de 2014 no Brasil!
+
+Um bate papo polêmico, onde ele também fala sobre as acusações feitas por um programa de tellevisão.]]></description>
+    </item>
+    <item>
+      <title>E-farsas.com</title>
+      <pubDate>Fri, 25 Feb 2011 16:54:44 -0300</pubDate>
+      <link>http://www.apocalipse2000.com.br/podcast05.htm</link>
+      <category>Podcast</category>
+      <enclosure url="http://www.apocalipse2000.com.br/podcast/apocalipse2000-podcast-05.mp3" length="44561530" type="audio/mpeg" />
+	  <guid isPermaLink="false">http://wwwapocalipse2000.com.br/podcast05.htm</guid>
+      <description><![CDATA[Estamos de volta com o podcast do Apocalipse2000. Depois de alguns anos parado, o podcast volta em um novo formato. Novos convidados, bate papos mais descontraidos e um podcast mais longo.
+
+Nesse podcast de reestréia, entrevistamos o Gilmar Lopes o criador do E-Farsas.com, o site que desvenda os mistérios da internet desde 2003. Foi uma conversa muito divertida, descontraida e cheia de nostalgia, e o que era para dar medo acabou ficando engraçado.]]></description>
+    </item>
+    <item>
+      <title>Wicca</title>
+      <pubDate>Sat, 6 Dec 2008 10:20:03 -0200</pubDate>
+      <link>http://www.apocalipse2000.com.br/podcast03.htm</link>
+      <category>Podcast</category>
+      <enclosure url="http://www.apocalipse2000.com.br/podcast/apocalipse2000-podcast-03.mp3" length="7597365" type="audio/mpeg" />
+	  <guid isPermaLink="false">http://wwwapocalipse2000.com.br/podcast03.htm</guid>
+      <description><![CDATA[Bianca Ben, dona do site Dimensão Wicca, conversa com Apocalipse2000 sobre  a Wicca. O período da inquisição, o preconceito,  a iniciação à Wicca e muito mais no terceiro Podcast do Apocalipse2000.]]></description>
+    </item>
+    <item>
+      <title>2012 e as Profecias Maias</title>
+      <pubDate>Sat, 22 Nov 2008 10:38:28 -0200</pubDate>
+      <link>http://www.apocalipse2000.com.br/podcast02.htm</link>
+      <category>Podcast</category>
+      <enclosure url="http://www.apocalipse2000.com.br/podcast/apocalipse2000-podcast-02.mp3" length="6523242" type="audio/mpeg" />
+	  <guid isPermaLink="false">http://wwwapocalipse2000.com.br/podcast02.htm</guid>
+      <description><![CDATA[Nesse segundo Podcast, Apocalipse2000 conversa com Ricardo Esteves, o grande colabroador do site em espiritismo e ufologia sobre as Profecias Maias, o ano de 2012 e o fim do mundo. ]]></description>
+    </item>
+    <item>
+      <title>A Tábua OUIJA</title>
+      <pubDate>Mon, 17 Nov 2008 00:00:01 -0200</pubDate>
+      <link>http://www.apocalipse2000.com.br/podcast01.htm</link>
+      <category>Podcast</category>
+      <enclosure url="http://www.apocalipse2000.com.br/podcast/apocalipse2000-podcast-01.mp3" length="4022268" type="audio/mpeg" />
+	  <guid isPermaLink="false">http://wwwapocalipse2000.com.br/podcast01.htm</guid>
+      <description><![CDATA[No Podcast de estréia, Apocalipse2000 fala do Tabuleiro OUIJA. Suas orígens e algumas recomendações para não brincar com o desconhecido. ]]></description>
+    </item>
+  </channel>
+</rss>

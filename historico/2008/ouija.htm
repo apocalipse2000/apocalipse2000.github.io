@@ -1,0 +1,904 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" type="text/css" media="screen" href="a-single.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="a-multiple.css" />
+<style type="text/css">
+.block       { position: absolute; left: opx; top: 0px; width: 125px; visibility: hidden }
+
+</style>
+<script type="text/javascript">//<![CDATA[
+
+var board, planchette;    // Board and planchette elements.
+
+var boardY, boardY;       // Coordinates.
+var nextX, nextY;
+var saveX, saveY;
+var posX, posY;
+
+var offsetX = 75;         // Offset of viewport on planchette.
+var offsetY = 70;
+
+var questionFld,          // Question and reply form fields.
+    replyFld;
+
+var inReply   = false;    // Status flags.
+var inContact = false;
+
+var response;             // Response to spell out.
+var nextChar;             // Next character to move to.
+
+var step    =    8;       // Used for movement.
+var timeout =   50;
+var pause   = 2000;
+var angle;
+var timerID;
+
+
+var chars = "abcdefghijklmnopqrstuvwxyz1234567890!~^_ ";
+
+
+
+posX = new Array(105, 134, 171, 204, 240, 270, 305, 340, 372, 389, 420, 452, 484,
+                 114, 151, 182, 217, 249, 274, 300, 331, 365, 399, 436, 466, 492,
+                 154, 184, 217, 251, 281, 314, 346, 378, 410, 441,
+                 137, 465, 300, 300, 300);
+posY = new Array(182, 161, 145, 134, 126, 123, 124, 125, 130, 140, 146, 155, 175,
+                 223, 202, 190, 181, 174, 171, 169, 172, 174, 185, 199, 211, 231,
+                 280, 280, 280, 280, 280, 280, 280, 280, 280, 280,
+                 054, 054, 350, 140, 215);
+
+window.onload = init;
+
+//-----------------------------------------------------------------------------
+// Initialize everything.
+//-----------------------------------------------------------------------------
+
+function init() {
+
+  var i;
+
+
+
+  board = document.getElementById("board");
+  boardX = getPageOffsetLeft(board);
+  boardY = getPageOffsetTop(board);
+
+  planchette = document.getElementById("planchette");
+  i = chars.indexOf("_");
+  moveElTo(planchette, boardX + posX[i] - offsetX, boardY + posY[i] - offsetY);
+  planchette.style.visibility = "visible";
+  
+
+
+  questionFld = document.getElementById("question");
+  replyFld = document.getElementById("reply");
+}
+
+
+function handsOn() {
+
+  inContact = true;
+}
+
+function handsOff() {
+
+  inContact = false;
+  if (inReply) {
+    saveX = getElLeft(planchette);
+    saveY = getElTop(planchette);
+    shakePlanchette();
+  }
+}
+
+function startReply() {
+
+
+
+  response += "_";
+  if (!inContact) {
+    saveX = getElLeft(planchette);
+    saveY = getElTop(planchette);
+    shakePlanchette();
+  }
+  if (getNext()) {
+    inReply = true;
+    movePlanchette();
+  }
+  else
+    inReply = false;
+}
+
+function endReply() {
+
+
+
+  nextChar = "";
+  inReply = false;
+}
+
+function getNext() {
+
+  var i;
+
+
+
+  if (response == "")
+    return false;
+
+  nextChar = response.substr(0, 1)
+  response = response.substr(1);
+  for (i = 0; i < chars.length; i++)
+    if (chars.charAt(i) == nextChar.toLowerCase()) {
+      nextX = posX[i];
+      nextY = posY[i];
+      return true;
+    }
+
+  return false;
+}
+
+function movePlanchette() {
+
+  var i, dx, dy, last, theta;
+
+
+
+  if (!inReply)
+    return;
+
+
+
+  if (inContact) {
+
+
+
+    dx = boardX + nextX - getElLeft(planchette) - offsetX;
+    dy = boardY + nextY - getElTop(planchette) - offsetY;
+    theta = Math.round(Math.atan2(-dy, dx) * 180 / Math.PI);
+    if (theta < 0)
+      theta += 360;
+
+
+
+    if (Math.abs(dx) < step && Math.abs(dy) < step) {
+
+   
+      moveElBy(planchette, dx, dy);
+      if (nextChar == "!")
+	  	replyFld.value = "YES";
+      else if (nextChar == "~")
+	  	replyFld.value = "NO";
+      else if (nextChar == "^")
+	  	replyFld.value = "GOOD BYE";
+	  else if (nextChar != "_")
+        replyFld.value += nextChar.toUpperCase();
+
+
+
+      last = nextChar;
+      if (getNext()) {
+        if (nextChar == last) {
+          angle = 0;
+          timerID = window.setTimeout('circlePlanchette()', pause);
+        }
+        else
+          timerID = window.setTimeout('movePlanchette()', pause);
+        return;
+      }
+
+      
+
+      else {
+        endReply();
+        return;
+      }
+    }
+
+ 
+
+    else if (theta > 23 && theta <= 68)
+      moveElBy(planchette, step, -step);
+    else if (theta > 68 && theta <= 113)
+      moveElBy(planchette, 0, -step);
+    else if (theta > 113 && theta <= 158)
+      moveElBy(planchette, -step, -step);
+    else if (theta > 158 && theta <= 203)
+      moveElBy(planchette, -step, 0);
+    else if (theta > 203 && theta <= 248)
+      moveElBy(planchette, -step, step);
+    else if (theta > 248 && theta <= 293)
+      moveElBy(planchette, 0, step);
+    else if (theta > 293 && theta <= 338)
+      moveElBy(planchette, step, step);
+    else
+      moveElBy(planchette, step, 0);
+  }
+
+  
+
+  timerID = window.setTimeout('movePlanchette()', timeout);
+}
+
+function circlePlanchette() {
+
+  var x, y;
+
+
+
+  if (!inContact) {
+    timerID = window.setTimeout('circlePlanchette()', timeout);
+    return;
+  }
+
+  
+
+  x = getElLeft(planchette) + step * Math.cos(angle);
+  y = getElTop(planchette) - step * Math.sin(angle);
+  moveElTo(planchette, x, y);
+  angle += Math.PI / 10;
+  if (angle < 2 * Math.PI)
+    timerID = window.setTimeout('circlePlanchette()', timeout);
+  else
+    movePlanchette();
+}
+
+function shakePlanchette() {
+
+  var dx, dy, x, y;
+
+ 
+
+  if (inContact)
+    return;
+
+  
+
+  dx = Math.floor(Math.random() * 5) - 2;
+  dy = Math.floor(Math.random() * 5) - 2;
+  x = saveX + dx;
+  y = saveY + dy;
+  moveElTo(planchette, x, y);
+  timerID = window.setTimeout('shakePlanchette()', timeout);
+}
+
+
+
+var none = new Array("pergunte me", "estou aqui", "nao tenha medo", "fale",
+                     "fale comigo", "estou ouvindo", "estou aguardando");
+var days = new Array("domingo", "segunda", "terca", "quarta", "quinta",
+                     "sexta", "sabado");
+var months = new Array("em janeiro", "em fevereiro", "em marco", 
+					   "em abril", "em maio", "em junho", "em julho", 
+					   "em agosto", "em setembro", "em outubro", "em novembro","em dezembro");
+var seasons = new Array("na primavera", "no verao", "no outono", "no inverno");
+var times = new Array("nunca", "dia 10", "dia 20", "muito breve", "amanha", "semana que vem", "nao agora", "mais tarde", "no tempo certo", "ainda nao" , "em breve" , "logo mais", "logo logo");
+var people = new Array("um amigo", "um estranho", "voce", "ninguem", "um espirito", "uma mulher", "uma criança", "uma entidade", "um homem");
+var places = new Array("distante", "perto", "muito perto", "outro lugar",
+                       "nao aqui");
+var other = new Array("nao responderei isso" , "nao entendi" ,"nao pergunte isso", "nao sei", "cuidado com suas perguntas", "tenho medo de responder", "vejo coisas estranhas", "estou com medo de responder" , "nao pense nisso", "estou muito perto" , "nao olhe para tras" , "tem alguem ai com voce" , "estou ouvindo vozes" , "pergunte novamente" , "pergunte de outra forma" , "pergunte diferente"  , "nao gostei da sua pergunta" , "nao quero responder" , "vou perturbar seu sono" );
+ 
+function consult() {
+
+  var question, words, r;
+  var i, today;
+
+  
+
+  if (timerID)
+    clearTimeout(timerID);
+  response = "";
+  inReply = false;
+  
+  
+  replyFld.value = "";
+
+
+
+  question = questionFld.value;
+  question = clean(question);
+  words = question.split(" ");
+  r = Math.random();
+
+
+
+  if (question == "") {
+    response = pickFromList(none);
+    startReply();
+    return false;
+  }
+
+  
+
+  if (words.length >= 3)
+    for (i = 0; i < words.length - 3; i++)
+      if (words[i + 1] == "or") {
+        if (r < .5)
+          response = words[i];
+        else
+          response = words[i + 2];
+        startReply();
+        return false;
+      }
+
+
+
+  if (r < .1)
+    response = pickFromList(other);
+
+ 
+
+  else if (inList(words, "dia")) {         
+    if (r < .7)
+      response = pickFromList(days);
+    else
+      response = pickFromList(times);
+  }
+  else if ((inList(words, "mes")) || (inList(words, "mês"))) {    
+    if (r < .7)
+      response = pickFromList(months);
+    else
+      response = pickFromList(times);
+  }
+  else if (inList(words, "tempo"))            
+    response = Math.floor(Math.random() * 12) + 1;
+  else if (inList(words, "quando")) {          
+    if (r < .3)
+      response = pickFromList(days);
+    if (r < .4)
+      response = pickFromList(months);
+    if (r < .5)
+      response = pickFromList(seasons);
+    else
+      response = pickFromList(times);
+  }
+
+  // Asking for a number?
+
+  else if (inList(words, "quanto") &&
+      (inList(words, "pouco") ||
+       inList(words, "quantos") ||
+       inList(words, "muito") ||
+       inList(words, "muitos"))) {
+    response = Math.round(Math.random() * 10) + 1;    
+    if (response != 10 && r < .5)                     
+      response += Math.round(Math.random() * 10);
+  }
+
+
+
+  else if (inList(words, "quem")) {
+    response = pickFromList(people);
+  }
+
+
+
+  else if (inList(words, "onde"))
+    response = pickFromList(places);
+
+
+
+  else if (inList(words, "porque") ||
+  			inList(words, "por que") ||
+			inList(words, "por quê") ||
+			inList(words, "porquê") ||
+			inList(words, "o quê") ||
+  			inList(words, "o que"))
+
+    response = pickFromList(other);
+
+
+
+  else if (inList(words, "sou") ||
+  			inList(words, "estou") ||
+			inList(words, "está") ||
+			inList(words, "esta") ||
+			inList(words, "tem") ||
+			inList(words, "temos") ||
+			inList(words, "tenho") ||
+			inList(words, "terei") ||
+			inList(words, "serei") ||
+			inList(words, "estarei") ||
+           inList(words, "é") ||
+		   inList(words, "era") ||
+		   inList(words, "sera") ||
+		   inList(words, "vou") ||
+		   inList(words, "vai") ||
+		   inList(words, "vão") ||
+		   inList(words, "vao") ||
+           inList(words, "são") ||
+           inList(words, "pode") ||
+		   inList(words, "posso") ||
+           inList(words, "podem") ||
+           inList(words, "poderia") ||
+		   inList(words, "poderiam") ||
+		   inList(words, "devemos") ||
+		   inList(words, "devo") ||
+		   inList(words, "deve") ||
+		   inList(words, "devem") ||
+           inList(words, "podia") ||
+           inList(words, "deveria")) {
+    if (r < .5)
+      response = "!";
+    else
+      response = "~";
+  }
+
+
+
+  if (response == "")
+    response = pickFromList(other);
+
+
+
+  startReply();
+}
+
+function abortReply() {
+
+  var i;
+
+
+
+  if (timerID)
+    clearTimeout(timerID);
+  response = "";
+  inReply = false;
+
+
+  
+  i = chars.indexOf("_");
+  moveElTo(planchette, boardX + posX[i] - offsetX, boardY + posY[i] - offsetY);
+}
+
+//-----------------------------------------------------------------------------
+// Utility functions.
+//-----------------------------------------------------------------------------
+
+function clean(s) {
+
+  var i, c, t;
+  var letters = "abcdefghijklmnopqrstuvwxyz";
+
+
+
+  t = s.toLowerCase();
+
+
+
+  s = "";
+  for (i = 0; i < t.length; i++) {
+    if (t.substr(i, 2) == "'s") {
+      s += " is";
+      i++;
+    }
+    else if (t.substr(i, 2) == "'t") {
+      s += " not";
+      i++;
+    }
+    else if (t.substr(i, 3) == "'ll") {
+      s += " will";
+      i += 2;
+    }
+    else
+      s += t.substr(i, 1);
+  }
+
+
+
+  t = "";
+  for (i = 0; i < s.length; i++) {
+    c = s.substr(i, 1);
+    if (letters.indexOf(c) >= 0)
+      t += c;
+    else
+      t += " ";
+  }
+  return t;
+}
+
+function inList(list, word) {
+
+  var i;
+
+
+
+  for (i = 0; i < list.length; i++)
+    if (list[i] == word)
+      return true;
+  return false;
+}
+
+function pickFromList(list) {
+
+  var r;
+
+
+
+  r = Math.floor(Math.random() * list.length);
+  return list[r];
+}
+
+
+
+function getPageOffsetLeft(el) {
+
+
+  return el.offsetLeft + (el.offsetParent ? getPageOffsetLeft(el.offsetParent) : 0);
+}
+
+function getPageOffsetTop(el) {
+
+
+  return el.offsetTop + (el.offsetParent ? getPageOffsetTop(el.offsetParent) : 0);
+}
+
+function getElLeft(el) {
+
+
+  return parseInt(el.style.left, 10);
+}
+
+function getElTop(el) {
+
+
+  return parseInt(el.style.top, 10);
+}
+
+function moveElTo(el, x, y) {
+
+
+  el.style.left = x + "px";
+  el.style.top  = y + "px";
+}
+
+function moveElBy(el, dx, dy) {
+
+
+  el.style.left = (getElLeft(el) + dx) + "px";
+  el.style.top  = (getElTop(el)  + dy) + "px";
+}
+
+//]]></script>
+
+<title>Apocalipse 2000 - Tabua OUIJA Virtual  - O Jogo do Copo</title>
+</head>
+
+<body onLoad="init()" style="min-width:900px;">
+<!-- inicio do topo do site -->
+<div class="topo-site">
+	<h1 class="logo"><a href="index.htm" accesskey="1"><img src="images/logo.jpg" alt="Apocalipse2000 - 13 anos" title="Apocalipse2000 &dagger; 1998 &dagger; 2011 - 13 anos" /></a></h1>
+	<div class="corner-right-top"><a href="http://feeds.feedburner.com/Apocalipse2000" class="main">RSS <img src="images/ico-rss.png" alt="RSS Feed" /></a> | <a href="http://www.twitter.com/apocalipse2000/" class="main">Twitter <img src="images/twitter_icone.gif" alt="Twitter" /></a></div>
+</div>
+
+<div class="busca">
+
+</div>
+
+<div class="box-right"></div>
+<!-- fim do topo do site -->
+<div class="skip-menu"><a title="Ir para o conteúdo" href="#conteudo" class="skip-menu" tabindex="1" accesskey="2">Ir para o conteúdo</a></div>
+<!-- inicio do centro do site -->
+<div class="central-left">
+<div class="central-right">
+	<div class="conteudo">
+		<div class="menuleft">
+	<ul class="menuleft">
+		<li class="menuleft"><a href="profecias_m.htm" class="menuleft">&dagger; Profecias</a>
+    		<ul class="menuleft-sub">
+			<li class="menuleft"><a href="nostradamus.htm" class="menuleft">&dagger; Nostradamus</a></li>
+    		<li class="menuleft"><a href="profecias.htm" class="menuleft">&dagger; Profecias</a></li></ul></li>
+		<li class="menuleft"><a href="medo_m.htm" class="menuleft">&dagger; Medo</a>
+    		<ul class="menuleft-sub">
+			<li class="menuleft"><a href="hist_alem.htm" class="menuleft">&dagger; Histórias do além</a></li>
+   			<li class="menuleft"><a href="persona.htm" class="menuleft">&dagger; Personagens cruéis</a></li>
+   			<li class="menuleft"><a href="ouija.htm" class="menuleft">&dagger; O Tabuleiro de Ouija</a></li>
+    		<li class="menuleft"><a href="contos.htm" class="menuleft">&dagger; Contos de terror</a></li></ul></li>
+		<li class="menuleft"><a href="crencas_m.htm" class="menuleft">&dagger; Crenças</a>
+			<ul class="menuleft-sub">
+    		<li class="menuleft"><a href="biblia.htm" class="menuleft">&dagger; A Bíblia Sagrada</a></li>
+    		<li class="menuleft"><a href="espiritismo.htm" class="menuleft">&dagger; Espiritismo</a></li>
+    		<li class="menuleft"><a href="crencas_wicca.htm" class="menuleft">&dagger; Wicca</a></li>
+    		<li class="menuleft"><a href="crencas_reiki.htm" class="menuleft">&dagger; Reiki</a></li></ul></li>
+		<li class="menuleft"><a href="ufologia.htm" class="menuleft">&dagger; Ufologia</a></li>
+		<li class="menuleft"><a href="muro_m.htm" class="menuleft">&dagger; Muro das Lamentações</a></li>
+		<li class="menuleft"><a href="cinema_m.htm" class="menuleft">&dagger; Cinema Terror</a></li>
+		<li class="menuleft"><a href="links.htm" class="menuleft">&dagger; Cemitério de sites</a></li>
+		<li class="menuleft"><a href="shop/index.htm" class="menuleft">&dagger; Canal de compras</a>
+			<ul class="menuleft-sub">
+    		<li class="menuleft"><a href="shop/livros/index.htm" class="menuleft">&dagger; Livros</a></li>
+   			<li class="menuleft"><a href="shop/dvd/index.htm" class="menuleft">&dagger; DVDs</a></li></ul>
+		</li>
+		<li class="menuleft"><a href="multimidia.htm" class="menuleft">&dagger; Multimídia</a>
+			<ul class="menuleft-sub">
+    		
+   			<li class="menuleft"><a href="podcast.htm" class="menuleft">&dagger; Podcast</a></li>
+			<li class="menuleft"><a href="videos.htm" class="menuleft">&dagger; Vídeos</a></li></ul>
+		</li>
+		<li class="menuleft"><a href="literatura_m.htm" class="menuleft">&dagger; Literatura</a></li>
+		<li class="menuleft"><a href="historico_m.htm" class="menuleft">&dagger; Histórico do site</a></li>
+		<li class="menuleft"><a href="contato_m.htm" class="menuleft">&dagger; Contatos Imediatos</a>
+			<ul class="menuleft-sub">
+    		<li class="menuleft"><a href="contato.htm" class="menuleft">&dagger; E-mail</a></li>
+   			<li class="menuleft"><a href="http://twitter.com/apocalipse2000" class="menuleft">&dagger; Twitter</a></li>
+<li class="menuleft"><a href="http://www.facebook.com/pages/Apocalipse2000/187883514580680" class="menuleft">&dagger; Facebook</a></li>
+<li class="menuleft"><a href="http://www.orkut.com/Community.aspx?cmm=799781" class="menuleft">&dagger; OrKut</a></li>
+			<li class="menuleft"><a href="parceiro.htm" class="menuleft">&dagger; Quem faz o Apocalipse2000</a></li>
+			<li class="menuleft"><a href="http://guestworld.lycos.com/wgb/wgbsign.dbm?owner=reinaldof" class="menuleft">&dagger; Livro de visitas</a>
+					<ul class="menuleft-sub">
+    		<li class="menuleft"><a href="http://guestworld.lycos.com/wgb/wgbview.dbm?owner=reinaldof" class="menuleft">&dagger; Ler</a></li>
+   			<li class="menuleft"><a href="http://guestworld.lycos.com/wgb/wgbsign.dbm?owner=reinaldof" class="menuleft">&dagger; Assinar</a></li></ul></li></ul></li></ul> </div><div class="protege"></div>
+	<div class="anuncio03">
+<script type="text/javascript"><!--
+google_ad_client = "pub-4033677283113362";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_ad_type = "text_image";
+//2007-04-21: criterio-02
+google_ad_channel = "1692894085";
+google_color_border = "333333";
+google_color_bg = "333333";
+google_color_link = "F2984C";
+google_color_text = "FFFFCC";
+google_color_url = "FFFF66";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<noscript title="Script para exibição de anúncios"></noscript>
+</div>
+	
+	
+	<span class="quebra-inv">&nbsp;</span>
+<div class="titulos-ouija" title="O Tabuleiro de OUIJA"><a href="http://www.apocalipse2000.com.br/" class="main">Home &gt;&gt;</a> <a href="http://www.apocalipse2000.com.br/medo_m.htm" class="main">Medo &gt;&gt;</a> <a href="http://www.apocalipse2000.com.br/ouija.htm" class="main">O Tabuleiro de OUIJA &gt;&gt;</a></div> <div class="clear-top"></div>
+ 
+ 	
+ <a name="conteudo"></a>
+
+
+
+<div class="ouija-f">
+<div id="planchette">
+
+	<!-- pointer image with imagemap outlining the shape, allows -->
+	<!-- script to detect when mouse is over the pointer         -->
+
+	<img src="images/planchette.gif" width="150" height="200" usemap="#planchetteMap" alt="" />
+	<map id="planchetteMap" name="planchetteMap">
+		<area shape="poly"
+		      coords="075,005,115,075,140,180,115,195,075,190,035,195,010,180,035,075"
+		      href="#"
+		      alt=""
+		      onmouseover="handsOn()"
+		      onmouseout="handsOff()"
+		      onclick="return false" />
+
+	</map>
+</div>
+ 
+
+<br>
+<br>
+
+Digite sua pergunta e clique em "perguntar". 
+
+    Em seguida coloque o mouse sobre o ponteiro <br>
+no
+    centro do tabuleiro e siga seus movimentos. 
+    Assim a mensagem será revelada.<br /><br />
+<form action="" onSubmit="consult(); return false;">
+Faça uma pergunta:&nbsp; <input id="question" name="question" type="text" size="40" />
+<input type="submit" value="Perguntar"> <input type="reset" value="Apagar" onClick="abortReply(); return true;"  />
+<br><br>
+
+<!--<a href="ouija2.htm">O ponteiro não apareceu? Tente este link.</a>-->
+
+
+
+
+			<img id="board" src="images/board.jpg" width="600" height="400" usemap="#boardMap" alt="" />
+			<map id="boardMap" name="boardMap">
+
+				<area shape="rect" coords="185,345,413,367" href="/" alt="Home" />
+			</map>
+<br>
+
+Resposta: <input id="reply" name="reply" type="text" readonly size="50" />
+</form>
+
+<br />
+
+<div class="destaque-interna-central">
+<div>
+<img alt="Foto de Ana, que responte as perguntas do tabuleiro" src="images/spacer.gif" class="ouija01" /> <strong>Quem responde as perguntas?</strong><br>
+<br>
+Ana morreu de forma trágica em 2002. Foi morta pelo seu namorado durante uma briga entre os dois. Ela prometeu vingança e busca se comunicar com o mundo dos vivos pela tábua OUIJA. Algumas vezes suas respostas podem não fazer muito sentido mas basta ser claro em suas perguntas que ela responderá de forma adequada. <br>
+<br>
+Cuidado com suas perguntas.  Ninguém sabe o que uma alma rancorosa pode responder.
+<br>
+<br>
+<a href="contos24.htm">Conheça sua história</a> e <a href="http://twitter.com/Ana_Ouija"> Acompanhe o Twitter da Ana<img src="images/twitter_icone.gif" alt="Twitter" /></a>
+</div>
+<br>
+<br>
+
+
+
+
+
+ 
+
+  </div>
+  </div>
+  <br />
+<br>
+<br>
+<br>
+<br>
+
+<div id="comentarios">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'apocalipse2000'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+     var disqus_identifier = 'ouija';
+     var disqus_url = 'http://www.apocalipse2000.com.br/ouija.htm';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+</div>
+
+<h3 class="bookmarks">Arquivo</h3>
+<ul class="links-arquivo">
+		<li class="li-links-arquivo"><a href="podcast01.htm" class="main">&dagger; Podcast Apocalipse2000 - A tábua OUIJA</a></li>
+		<li class="li-links-arquivo"><a href="hist_alem36.htm" class="main">&dagger; Depoimentos sobre o jogo do copo</a></li>
+		<li class="li-links-arquivo"><a href="hist_alem31.htm" class="main">&dagger; Jovens tentam suicídio depois de praticar o Jogo do Copo</a></li>
+		<li class="li-links-arquivo"><a href="hist_alem30.htm" class="main">&dagger; Regras para o uso do tabuleiro OUIJA</a></li>
+		<li class="li-links-arquivo"><a href="hist_alem29.htm" class="main">&dagger; A tabua OUIJA</a></li>
+</ul>
+
+
+
+
+<h3 class="bookmarks-1">Bookmarks</h3>
+<div class="bookmarks-int">
+<ul class="bookmarks">
+<li class="bookmarks"><a href="http://del.icio.us/post?http://www.apocalipse2000.com.br/ouija.htm" class="main"><img src="images/ico_delicious.gif" alt="Del.icio.us" /> Del.icio.us</a></li>
+<li class="bookmarks"><a href="http://www.facebook.com/share.php?u=http://www.apocalipse2000.com.br/ouija.htm" class="main"><img src="images/ico_facebook.gif" alt="Facebook" /> Facebook</a></li>
+<li class="bookmarks"><a href="http://www.technorati.com/search/http://www.apocalipse2000.com.br/ouija.htm" class="main"><img src="images/ico_technorati.gif" alt="Technorati" /> Technorati</a></li>
+<li class="bookmarks"><a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=http://www.apocalipse2000.com.br/ouija.htm" class="main"><img src="images/ico_yahoo.gif" alt="My Yahoo" /> My Yahoo</a></li>
+<li class="bookmarks"><a href="http://meneame.net/submit.php?url=http://www.apocalipse2000.com.br/ouija.htm" class="main"><img src="images/ico_meneame.gif" alt="Méname" /> Menéame</a></li>
+<li class="bookmarks"><a href="http://tec.fresqui.com/post?url=http://www.apocalipse2000.com.br/ouija.htm" class="main"><img src="images/ico_fresqui.gif" alt="Fresqui" /> Fresqui</a></li>
+<li class="bookmarks"><a href="http://twitter.com/" class="main"><img src="images/ico_twitter.gif" alt="Twitter" /> Twitter</a></li>
+<li class="bookmarks"><a href="http://bloglines.com/" class="main"><img src="images/ico_bloglines.gif" alt="Bloglines" /> Bloglines</a></li>
+</ul>
+</div>
+
+<div class="anuncio02">
+<script type="text/javascript"><!--
+google_ad_client = "pub-4033677283113362";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+google_color_border = "7F7F7F";
+google_color_bg = "000000";
+google_color_link = "B47B10";
+google_color_text = "FFFFCC";
+google_color_url = "FFFF66";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<noscript title="Script para exibição de anúncios"></noscript>
+</div>
+
+<div class="anuncio03">
+
+<p class="parceiro">Parceiros</p>
+<a href="http://www.apocalipse2000.com.br/"><img src="http://www.apocalipse2000.com.br/images/apocalipse.gif" border="0" alt="Apocalipse2000" /></a>
+<br />
+<a href="http://www.apocalipse2000.com.br/parceiros/medob.htm"><img src="http://lh6.ggpht.com/_EIeR9eLXB_k/TMKbD-b4SHI/AAAAAAAAC7o/RxelK1-h_Go/medob.jpg" border="0" alt="Medo B" /></a>
+<br />
+ 
+
+
+
+<p class="parceiro"><a href="parcerias.htm">Como ser parceiro?</a></p>
+<script type="text/javascript"><!--
+google_ad_client = "pub-4033677283113362";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_ad_type = "text_image";
+//2007-04-21: criterio-02
+google_ad_channel = "1692894085";
+google_color_border = "333333";
+google_color_bg = "333333";
+google_color_link = "F2984C";
+google_color_text = "FFFFCC";
+google_color_url = "FFFF66";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<noscript title="Script para exibição de anúncios"></noscript>
+
+<p class="parceiro">Parceiros</p>
+<ul>
+<li><a href="parceiros/mundodohorror.htm">Mundo do horror</a></li>
+<li><a href="parceiros/nightmareslumber.htm">Nightmare Slumber</a></li>
+<li><a href="parceiros/resintsurvive.htm">Resist n Survive</a></li>
+<li><a href="parceiros/demoniacsouls.htm">Demoniac Souls</a></li>
+<li><a href="parceiros/fossadasalmas.htm">Fossa das Almas</a></li>
+<li><a href="parceiros/paraciencia.htm">Paraciência</a></li>
+
+<li><a href="parceiros/eteseovnis.htm">ETs e OVNIs</a></li>
+<li><a href="parceiros/identidadeserial.htm">Identidade Serial Killer</a></li>
+
+<li><a href="parceiros/almasperdidas.htm">Almas Perdidas</a></li>
+<li><a href="parceiros/horrormovies.htm">Horror Movies</a></li>
+
+
+
+<li><a href="parceiros/insanitarium.htm">Insanitarium</a></li>
+<li><a href="parceiros/issodamedo.htm">Isso dá medo</a></li>
+</ul>
+</div>
+</div>
+<div class="validator">Válido 
+<a href="http://validator.w3.org/check?uri=referer" class="main">XHTML 1.0</a> - 
+<a href="http://jigsaw.w3.org/css-validator/check/referer" class="main">CSS</a> - <a href="acessibilidade.htm" class="main">Acessibilidade</a> - <a href="erros.htm" class="main">Relatar erros</a></div>
+</div>
+</div>
+
+
+
+<!-- fim do centro do site -->
+
+
+
+<!-- inicio do rodape do site -->
+
+<div class="rodape">
+	<div class="rodape-left">
+			<div class="rodape-centro">
+			Apocalipse 2000© 06/06/2000. Todos os direitos reservados.<br />
+			<a href="index.htm" class="main">Página inicial</a> - <a href="contato.htm" class="main">Entre em contato com o Apocalipse2000</a></div>
+	</div>
+	 <div class="rodape-right"></div>
+
+<div class="facebook">
+<script src="http://connect.facebook.net/pt_BR/all.js#xfbml=1"></script><fb:like-box href="http://www.facebook.com/pages/Apocalipse2000/187883514580680" width="192" show_faces="true" stream="false" header="false"></fb:like-box>     
+</div>  
+</div>
+
+
+<!-- fim do rodape do site -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1011443-1";
+urchinTracker();
+</script>
+<div style="display:none;">
+<script type="text/javascript" src="http://widgets.amung.us/tab.js"></script><script type="text/javascript">WAU_tab('lc2ai9cdzs06')</script>
+<!--http://whos.amung.us/stats/lc2ai9cdzs06/-->
+</body>
+</html>
