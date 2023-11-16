@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="alternate" title="RSS Apocalipse2000" href="http://feeds.feedburner.com/Apocalipse2000" type="application/rss+xml">
+<STYLE type="text/css" media="all">@import "../../apocalipse.css";</STYLE>
+	<TITLE>Apocalipse Home Page</TITLE>
+
+</HEAD>
+<BODY  onload="startclock ()">
+<script language="JavaScript" type="text/javascript">
+
+var Temp2;
+
+var timerID = null;
+
+var timerRunning = false;
+
+function showtime() {
+
+now = new Date();
+
+var CurHour = now.getHours();
+
+var CurMinute = now.getMinutes();
+
+var CurMonth = now.getMonth();
+
+var CurDate = now.getDate();
+
+var CurYear = now.getYear();
+
+var CurSecond = now.getSeconds();
+
+now = null;
+
+Hourleft = 23 - CurHour
+
+Minuteleft = 59 - CurMinute
+
+Secondleft = 59 - CurSecond
+
+var Yearleft = 99 - CurYear
+
+var Monthleft = 11 - CurMonth
+
+var Dateleft = 31 - CurDate
+
+if (Yearleft!=1) {var ys="s"} else {var ys=""};
+
+if (Monthleft!=1) {var mos="es"} else {var mos=""}
+
+if (Dateleft!=1) {var ds="s"} else {var ds=""}
+
+if (Hourleft!=1) {var hs="s"} else {var hs=""}
+
+if (Minuteleft!=1) {var mis="s"} else {var mis=""}
+
+if (Secondleft!=1) {var ss="s"} else {var ss=""}
+
+Temp3=Yearleft+' ano'+ys+', '+Monthleft+' mes'+mos+', '+Dateleft+' dia'+ds+', '+Hourleft+' hora'+hs+', '+Minuteleft+' minuto'+mis+' e '+Secondleft+' segundo'+ss+'...'
+
+window.status=Temp2;
+
+document.frm.left.value=Temp3;
+
+timerID = setTimeout("showtime()",1000);
+
+timerRunning = true;
+
+}
+
+var timerID = null;
+
+var timerRunning = false;
+
+function stopclock () {
+
+if(timerRunning)
+
+clearTimeout(timerID);
+
+timerRunning = false;
+
+}
+
+function startclock () {
+
+// Make sure the clock is stopped
+
+stopclock();
+
+showtime();
+
+}
+
+</script>
+<center><form name="frm">
+  <p><b>Faltam apenas:<br>
+  <input type="text" size="53" name="left" value="Java"><br>
+  para o ano 2000.<br>
+ </b></p>
+</form></center>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1011443-1";
+urchinTracker();
+</script>
+<div style="display:none;">
+<script type="text/javascript" src="http://widgets.amung.us/tab.js"></script><script type="text/javascript">WAU_tab('lc2ai9cdzs06')</script>
+<!--http://whos.amung.us/stats/lc2ai9cdzs06/-->
+</div>
+</body>
+</html>
