@@ -1,0 +1,853 @@
+/* ---------Global---------- */
+
+body {
+	margin-left : 0;
+	margin-top : 0;
+	margin-right:0;
+	margin-bottom:0;
+	background-color:#000000;
+	font-family:        Verdana, Arial, Helvetica, sans-serif;
+   font-size:          10pt;
+   color:#FFFFFF;
+	
+}
+
+table {
+   font-family:        Verdana, Arial, Helvetica, sans-serif;
+   font-size:          10pt;
+   color:#FFFFFF;
+
+}
+
+.linha {
+color:#FFFFFF;
+width:200px;
+height:1px;
+text-align:center;
+}
+
+a {
+   font-family:        Verdana, Arial, Helvetica, sans-serif;
+   font-size:          10pt;
+   color:#FFFFFF;
+
+}
+
+a.main:link{
+   color: white; 
+   text-decoration:    none;
+   font-size:          8pt;
+   
+}
+
+a.main{  
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+color: white; 
+text-decoration: none;
+font-size:          8pt;
+
+}
+
+
+a.main:hover{
+   color: yellow; 
+   text-decoration: underline;
+}
+
+a.int-titulos:visited{
+   color: #FF9900; 
+   text-decoration:    none;
+   font-size:          11pt;
+   font-weight:bold;
+   
+}
+
+a.int-titulos:link{
+   color: #FF9900; 
+   text-decoration:    none;
+   font-size:          11pt;
+   font-weight:bold;
+   
+}
+
+a.int-titulos:hover{
+   color: #FF3300; 
+   text-decoration:    none;
+   font-size:          11pt;
+   font-weight:bold;
+   
+}
+
+ul{
+margin-left:20px;
+}
+
+ol{
+margin-left:20px;
+margin-bottom:20px;
+}
+
+li{
+list-style-type: disc;
+margin-left:20px;
+}
+
+
+img {
+	border:            none;
+}
+
+
+a.orkut1 {
+   font-family:        Verdana, Arial, Helvetica, sans-serif;
+   font-size:          10pt;
+   color:black;
+   font-weight:bold;
+   text-decoration:none;
+
+}
+
+a.orkut2 {
+   font-family:        Verdana, Arial, Helvetica, sans-serif;
+   font-size:          10pt;
+   color: #FF6600;
+    font-weight:bold;
+	text-decoration:none;
+
+}
+a.english {
+   font-family:        Verdana, Arial, Helvetica, sans-serif;
+   font-size:          11px;
+   color: #999999;
+   font-weight:bold;
+   text-decoration:none;
+
+}
+
+a.guestbook {
+   font-family:        Verdana, Arial, Helvetica, sans-serif;
+   font-size:          11px;
+   color: #999999;
+   font-weight:bold;
+   text-decoration:none;
+
+}
+
+.right{
+text-align:right;
+}
+
+.center{
+text-align:center;
+}
+
+.destaque-interna-central{
+background-color:gray;
+width:450px;
+margin-left:230px;
+padding:20px;
+}
+
+
+div.destaque-centro {
+border:1px solid gray;
+background-color: #000000;
+color: #FFFFFF;
+padding:4px;
+margin:10px;
+}
+
+/* ---------Google adsense---------- */
+
+.publicidade-01 {
+width:140px;
+margin-left:30px;
+vertical-align:top;
+}
+
+.publicidade-02 {
+margin-left:30px;
+}
+
+
+/* ---------Tabua ouija---------- */
+
+#planchette {
+  position: absolute;
+  visibility: hidden;
+}
+
+.ouija-f{
+border: 0px solid white;
+}
+
+.anuncio-ouija{
+background-color:#000000;
+margin-left:200px;
+}
+
+/* ---------topo do site---------- */
+.topo-site{
+padding:0px;
+margin:0px;
+width:100%;
+background-image:url(images/fundo-top.gif);
+background-repeat: repeat-x;
+background-position:top;
+height:105px;
+}
+
+.logo{
+width:606px;
+margin:0px;
+padding:0px;
+}
+.corner-right-top{
+top:23px;
+right:25px;
+position:absolute;
+z-index:6;
+
+}
+
+
+
+
+.iframe{
+border:0px;
+width:174px;
+height:143px;
+margin-right:0px;
+margin-left:10px;
+background-color:#000000;
+}
+
+.iframe2{
+border:0px;
+width:90%;
+margin-top:20px;
+height:60px;
+margin-left:20px;
+}
+
+/* I-frame */
+
+
+/* ---------centro do site---------- */
+.central-left{
+width:100%;
+background-image:url(images/fundo-left.gif);
+background-repeat:repeat-y;
+background-position:left;
+}
+
+.central-right{
+width:100%;
+background-image:url(images/fundo-right.gif);
+background-repeat:repeat-y;
+background-position:right;
+}
+.conteudo{
+margin-right:40px;
+padding-left:30px;
+min-height:850px;
+}
+
+.conteudo h2{
+	font-weight:0.8em;
+	padding-bottom:0px;
+}
+
+
+.quebra-inv{
+font-size:1px;
+}
+
+.titulos{
+background-image:url(images/tit-novidades.gif);
+background-repeat:no-repeat;
+background-position:bottom;
+height:60px;
+width:574px;
+position:absolute;
+left:230px;
+text-align:left;
+vertical-align:top;
+}
+
+.titulos-profecias,
+.titulos-nostradamus,
+.titulos-medo,
+.titulos-hist-alem,
+.titulos-persona,
+.titulos-ouija,
+.titulos-contos,
+.titulos-crencas,
+.titulos-wicca,
+.titulos-biblia,
+.titulos-espiritismo,
+.titulos-reiki,
+.titulos-ufologia,
+.titulos-cinema,
+.titulos-links,
+.titulos-compras,
+.titulos-livros,
+.titulos-dvds,
+.titulos-contato,
+.titulos-historico,
+.titulos-literatura,
+.titulos-muro,
+.titulos-multimidia{
+background-repeat:no-repeat;
+background-position:bottom;
+height:60px;
+width:574px;
+position:absolute;
+left:230px;
+text-align:left;
+vertical-align:top;
+}
+
+.titulos-profecias{
+background-image:url(images/tit-profecias.gif);
+}
+
+.titulos-nostradamus{
+background-image:url(images/tit-nostradamus.gif);
+}
+
+.titulos-medo{
+background-image:url(images/tit-medo.gif);
+}
+
+.titulos-hist-alem{
+background-image:url(images/tit-hist-alem.gif);
+}
+
+.titulos-persona{
+background-image:url(images/tit-persona.gif);
+}
+
+.titulos-ouija{
+background-image:url(images/tit-ouija.gif);
+}
+
+.titulos-contos{
+background-image:url(images/tit-contos.gif);
+}
+
+.titulos-crencas{
+background-image:url(images/tit-crencas.gif);
+}
+
+.titulos-wicca{
+background-image:url(images/tit-wicca.gif);
+}
+
+.titulos-espiritismo{
+background-image:url(images/tit-espiritismo.gif);
+}
+
+.titulos-biblia{
+background-image:url(images/tit-biblia.gif);
+}
+
+.titulos-reiki{
+background-image:url(images/tit-reiki.gif);
+}
+
+.titulos-ufologia{
+background-image:url(images/tit-ufologia.gif);
+}
+
+.titulos-cinema{
+background-image:url(images/tit-cinema.gif);
+}
+
+.titulos-links{
+background-image:url(images/tit-links.gif);
+}
+.titulos-compras{
+background-image:url(images/tit-compras.gif);
+}
+
+.titulos-livros{
+background-image:url(images/tit-livros.gif);
+}
+
+.titulos-dvds{
+background-image:url(images/tit-dvds.gif);
+}
+
+.titulos-contato{
+background-image:url(images/tit-contato.gif);
+}
+
+.titulos-historico{
+background-image:url(images/tit-historico.gif);
+}
+
+.titulos-literatura{
+background-image:url(images/tit-literatura.gif);
+}
+
+.titulos-muro{
+background-image:url(images/tit-muro.gif);
+}
+
+.titulos-multimidia{
+background-image:url(images/tit-multimidia.gif);
+}
+
+.fotos-criadores-reinaldo,
+.fotos-criadores-ricardo,
+.fotos-criadores-bianca{
+width:100px;
+height:150px;
+float:left;
+background-repeat:no-repeat;
+border:1px solid black;
+padding-right:10px;
+}
+
+.fotos-criadores-reinaldo{
+background-image:url(images/img-reinaldo.jpg);
+}
+
+.fotos-criadores-ricardo{
+background-image:url(images/img-ricardo.jpg);
+}
+
+.fotos-criadores-bianca{
+background-image:url(images/img-bianca.jpg);
+}
+
+
+.clear-top{
+margin-top:60px;
+}
+
+div.chamadas-home{
+margin-bottom:20px;
+font-size:11px;
+border:1px solid black;
+margin-left:200px;
+}
+img.chamadas-home{
+float:left;
+padding-right:10px;
+}
+h2.chamadas-home{
+color:#FF9900;
+font-size:14px;
+}
+
+hr.chamadas-home{
+color: #FFFFFF;
+height:1px;
+width:300px;
+}
+
+div.destaques-home{
+margin-top:30px;
+margin-left:220px;
+border:1px solid black;
+}
+img.destaques-home{
+margin-right:30px;
+}
+
+.arquivo{
+background-image:url(images/tit-arquivo.gif);
+background-repeat:no-repeat;
+height:163px;
+width:470px;
+margin-left:110px;
+color:#000;
+}
+
+.links-arquivo{
+margin-left:0px;
+list-style-type:none;
+margin-top:0px;
+}
+.li-links-arquivo{
+margin-bottom:7px;
+margin-left:30px;
+list-style-type:none;
+}
+
+h3.bookmarks{
+background-color:#FFFFFF;
+color:#000000;
+padding-left:20px;
+font-size:11px;
+font-weight:bold;
+margin-left:20px;
+margin-top:20px;
+}
+
+h3.bookmarks-1{
+clear:both;
+background-color:#FFFFFF;
+color:#000000;
+padding-left:20px;
+font-size:11px;
+font-weight:bold;
+margin-left:20px;
+margin-top:20px;
+clear:left;
+}
+
+h3.bookmarks-home{
+clear:both;
+background-color:#FFFFFF;
+color:#000000;
+padding-left:20px;
+font-size:11px;
+font-weight:bold;
+margin-left:20px;
+margin-top:20px;
+margin-right:30px;
+}
+
+
+div.bookmarks-int{
+font-size:11px;
+margin-left:40px;
+}
+
+ul,li.bookmarks{
+display: inline;
+list-style-type:none;
+padding-left:0px;
+margin-left:0px;
+margin-right:15px;
+}
+
+/* ---------menu esquerdo---------- */
+
+.invisible, .invisible a {
+   display: none;
+   background: #fff;
+   color: #fff;
+}
+
+div.skip-menu{
+position:absolute;
+top:3px;
+right:25px;
+z-index:4;
+}
+
+a.skip-menu{
+   color: #fff;
+   font-size:10px;
+   text-decoration:none;
+}
+
+div.menuleft{
+width:220px;	
+background-image:url(images/fundo-menuleft.gif);
+background-repeat:no-repeat;
+background-position:top right;
+font-size:11px;
+float:left;
+padding-left:0px;
+margin-left:0px;
+vertical-align:top;
+margin-bottom:30px;
+text-align:left;
+position:absolute;
+left:0px;
+}
+.protege{
+float:left;
+border:1px solid black;
+height:950px;
+padding-left:200px;
+}
+
+
+ul.menuleft{
+list-style-type:none;
+padding-left:0px;
+margin-left:0px;
+padding-top:5px;
+padding-bottom:0px;
+margin-bottom:0px;
+}
+
+
+li.menuleft{
+list-style-type:none;
+padding-top:3px;
+padding-left:0px;
+margin-left:20px;
+margin-bottom:0px;
+}
+
+ul.menuleft-sub{
+list-style-type:none;
+margin-left:0px;
+padding-left:0px;
+margin-bottom:100px;
+}
+
+a.menuleft:link{
+font-size: 11px;
+color: #FF0000; 
+text-decoration:    none;
+   
+}
+
+a.menuleft:visited{
+font-size: 11px;
+color: #FF0000; 
+text-decoration:    none;
+}
+
+a.menuleft:hover{
+font-size: 11px;
+color: #993300; 
+text-decoration:underline;
+
+}
+
+a.menuleft:active {
+font-size: 11px;
+color: #FF0000; 
+}
+
+.facebook{
+	background: #FFF;
+	 margin-left:30px;
+	 margin-top:10px;
+	 position:absolute;
+	 top:770px;
+}
+
+.busca{
+top:50px;
+right:0px;
+padding:0px;
+border:0px;
+margin:0px;
+position:absolute;
+width:175px;
+z-index:4;
+}
+
+label[for="busca"]{
+	display:block;
+}
+
+.box-right{
+background-image:url(images/corner-top-right.gif);
+background-repeat:no-repeat;
+height:105px;
+width:42px;
+position:absolute;
+top:0px;
+right:0px;
+z-index:3;
+padding-top:10px;
+}
+/*Parceria*/
+.anuncio{
+margin-top:30px;
+margin-left:30px;
+margin-bottom:20px;
+width:120px;
+float:right;
+height:1050px;
+background-color:#000000;
+position:
+}
+
+.anuncio02{
+margin-top:10px;
+margin-left:200px;
+width:468px;
+height:60px;
+background-color:#000000;
+}
+
+.anuncio03{
+position:absolute;
+right:25px;
+top:110px;
+background-color:#000000;
+}
+
+.anuncio03 ul{
+	padding:0px;
+	margin:0px;
+	background-color: #000;
+	
+}
+
+.anuncio03 ul li a{
+font-size:0.8em;
+	
+}
+
+.banner-wicca{
+border:1px solid white;
+margin-left:180px;
+}
+
+.clear-hr{
+clear:both;
+}
+
+.comente{
+background:#CCC; 
+font-weight:bold; 
+color:#000; 
+padding:5px; 
+text-align:center;
+clear:left;
+
+}
+
+.comente a{
+color:#000; 
+
+}
+
+.parceiro{
+background: #333;
+ color: #FFF;
+  text-align:center; 
+  font-size:0.8em; 
+  font-weight: bold;
+}
+
+.parceiro a{
+  font-size:0.8em; 
+
+}
+
+
+ul.menu-podcasts li{
+	list-style:none;
+	display:inline-block;
+	text-align:center;
+	margin-bottom:30px;
+	vertical-align:top;
+}
+
+ul.menu-podcasts li img{
+	border:1px solid white;
+}
+
+ul.menu-podcasts li a{
+	text-decoration:none;
+}
+
+ul.menu-podcasts li a:hover{
+	text-decoration:underline;
+}
+
+
+/* ---------rodape do site---------- */
+.rodape{
+background-image:url(images/fundo-bottom.gif);
+background-repeat:repeat-x;
+background-position:bottom;
+width:100%;
+z-index:8;
+border:0px solid white;
+height:100px;
+vertical-align:bottom;	
+}
+
+.rodape-left{
+float:left;
+background-image:url(images/rodape-left.gif);
+background-repeat:no-repeat;
+background-position:bottom left;
+height:100px;
+width:100%;
+border:0px solid white;
+text-align:center;
+position:absolute;
+z-index:2;
+
+}
+
+.rodape-centro{
+white-space:nowrap;
+font-size:10px;
+vertical-align:bottom;
+padding-top:60px;
+}
+
+.rodape-right{
+float:right;
+background-image:url(images/rodape-right.jpg);
+background-repeat:no-repeat;
+background-position:bottom right;
+height:100px;
+width:200px;
+right:0px;
+position:absolute;
+z-index:1;
+}
+
+.validator{
+text-align:right;
+font-size:11px;
+margin-right:35px;
+}
+
+/* erros */
+
+fieldset.erros{
+	border:0px;
+}
+
+fieldset.erros label{
+	display:block;
+	margin-bottom:20px;
+	font-weight:bold;
+}
+
+fieldset.erros label span{
+	font-size:0.8em;
+	font-weight: normal;
+}
+
+fieldset.erros input[type="text"],
+fieldset.erros textarea{
+	display:block;
+	width:50%;
+}
+
+
+ul.erros li{
+	list-style: disc;
+	margin-left:220px;
+	margin-bottom:10px;
+}
+
+.chamada-main{
+	background-color: #FFC; 
+	margin-left:220px; 
+	margin-right:150px; 
+	padding:10px; 
+	border:1px solid white; 
+	color:#000; 
+	border-radius: 	10px; 
+	-moz-border-radius: 10px;
+	text-align:center;
+}
+
+#comentarios-fb1{
+	width:450px;
+	background-color:white;
+}
+
+
+/* border:1px solid white; */

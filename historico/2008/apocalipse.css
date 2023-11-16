@@ -1,0 +1,1990 @@
+/* ---------Global---------- */
+
+body {
+	margin-left : 0;
+	margin-top : 0;
+	background-color:#000000;
+}
+
+table {
+   font-family:        Verdana, Arial, Helvetica, sans-serif;
+   font-size:          10pt;
+   color:#FFFFFF;
+
+}
+
+.linha {
+color:#FFFFFF;
+width:200px;
+height:1px;
+text-align:center;
+}
+
+a {
+   font-family:        Verdana, Arial, Helvetica, sans-serif;
+   font-size:          10pt;
+   color:#FFFFFF;
+
+}
+
+a.main:link{
+   color: white; 
+   text-decoration:    none;
+   font-size:          8pt;
+   
+}
+
+a.main{  
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+color: white; 
+text-decoration: none;
+font-size:          8pt;
+
+}
+
+
+a:hover.main{
+   color: yellow; 
+   text-decoration: underline;
+}
+
+
+
+
+img {
+	border:            none;
+}
+
+
+a.orkut1 {
+   font-family:        Verdana, Arial, Helvetica, sans-serif;
+   font-size:          10pt;
+   color:black;
+   font-weight:bold;
+   text-decoration:none;
+
+}
+
+a.orkut2 {
+   font-family:        Verdana, Arial, Helvetica, sans-serif;
+   font-size:          10pt;
+   color: #FF6600;
+    font-weight:bold;
+	text-decoration:none;
+
+}
+a.english {
+   font-family:        Verdana, Arial, Helvetica, sans-serif;
+   font-size:          11px;
+   color: #999999;
+   font-weight:bold;
+   text-decoration:none;
+
+}
+
+a.guestbook {
+   font-family:        Verdana, Arial, Helvetica, sans-serif;
+   font-size:          11px;
+   color: #999999;
+   font-weight:bold;
+   text-decoration:none;
+
+}
+
+
+
+div.destaque-centro {
+border:1px solid gray;
+background-color: #000000;
+color: #FFFFFF;
+padding:4px;
+margin:10px;
+}
+
+/* ---------Google adsense---------- */
+
+.publicidade-01 {
+width:140px;
+margin-left:30px;
+vertical-align:top;
+}
+
+.publicidade-02 {
+margin-left:30px;
+}
+
+
+/* ---------Tabua ouija---------- */
+
+#planchette {
+  position: absolute;
+  visibility: hidden;
+}
+
+/* ---------Fundos---------- */
+
+.wid-hei100{
+width:100%;
+height:100%;
+}
+
+.wid100{
+width:100%;
+}
+
+.wid-td-ing{
+width:38px;
+}
+
+.hei100{
+height:100%;
+}
+
+.fundo_top01{
+background-image:url(images/menu_top_18.gif);
+background-position:bottom left;
+background-repeat:no-repeat;
+
+}
+
+.fundo_top01-ing{
+background-image:url(english/images/menu_top_18.gif);
+background-position:bottom right;
+background-repeat:no-repeat;
+
+}
+
+.menu_centro01_03{
+background-image:url(images/menu_centro01_03.gif);
+background-position:top;
+text-align:right;
+vertical-align:top;
+width:100%;
+}
+.fundo_top2{
+background-image:url(images/fundo_top2.gif);
+}
+
+.ident_centro02{
+background-image:url(images/identidade_centro_02.gif);
+}
+.ident_centro03{
+background-image:url(images/identidade_centro_03.gif);
+}
+.ident_centro04{
+background-image:url(images/identidade_centro_04.gif);
+}
+.ident_centro05{
+background-image:url(images/identidade_centro_05.gif);
+width:14px;
+}
+.ident_centro06{
+background-image:url(images/identidade_centro_06.gif);
+vertical-align:top;
+}
+.ident_centro11{
+background-image:url(images/identidade_centro_11.gif);
+width:100px;
+}
+.ident_centro12{
+background-image:url(images/identidade_centro_12.gif);
+}
+.ident_centro15{
+background-image:url(images/identidade_centro_15.gif);
+width:100%;
+}
+
+/* ---------TD conteudos---------- */
+
+.td-conteudos {
+vertical-align:top;}
+
+/* ---------text special---------- */
+
+.biblia_babel {
+background-image:url(ilust2944/babel02.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+}
+
+.biblia_babel2 {
+background-image:url(ilust2944/babel01.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+}
+
+.biblia_igrej_local {
+background-image:url(ilust2944/sete_igrejas.jpg);
+width:461px;
+height:381px;
+}
+
+.biblia_paixao {
+background-image:url(ilust2944/paixao_cristo.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:227px;
+height:227px;
+}
+.biblia_galvao01 {
+background-image:url(ilust2944/frei_galvao.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:180px;
+height:127px;
+}
+
+.biblia_galvao02 {
+background-image:url(ilust2944/frei_galvao02.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:242px;
+height:303px;
+float:right;
+}
+
+.biblia_google01 {
+background-image:url(ilust2944/godseyeviewcrosssm.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:500px;
+height:492px;
+}
+
+.biblia_google02 {
+background-image:url(ilust2944/godseyeviewedensm.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:500px;
+height:491px;
+}
+
+.biblia_google03 {
+background-image:url(ilust2944/godseyeviewarksm.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:500px;
+height:500px;
+}
+
+.biblia_google04 {
+background-image:url(ilust2944/godseyeviewmosessm.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:500px;
+height:500px;
+}
+
+.cavalos01 {
+background-image:url(ilust2944/cavalos_01.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:53px;
+height:81px;
+
+}
+.cavalos02 {
+background-image:url(ilust2944/cavalos_02.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:53px;
+height:81px;
+
+}
+.cavalos03 {
+background-image:url(ilust2944/cavalos_03.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:53px;
+height:81px;
+
+}
+.cavalos04 {
+background-image:url(ilust2944/cavalos_04.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:53px;
+height:81px;
+
+}
+.cavalos05 {
+background-image:url(ilust2944/cavalos_05.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:53px;
+height:81px;
+
+}
+.cavalos06 {
+background-image:url(ilust2944/cavalos_06.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:53px;
+height:81px;
+
+}
+
+.cavalos_deixados {
+background-image:url(ilust2944/cavalos_deixado.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:130px;
+height:200px;
+}
+
+.cavalos_senda {
+background-image:url(ilust2944/cavalos_senda.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:85px;
+height:125px;
+}
+
+.cavalos_lucif {
+background-image:url(ilust2944/cavalos_lucifer.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:75px;
+height:114px;
+margin:10px;
+}
+
+.cavalos_enviado {
+background-image:url(ilust2944/enviado.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:130px;
+height:204px;
+margin:10px;
+}
+
+
+
+
+.crencas_wicca01 {
+background-image:url(ilust2944/estre_wicca33.gif);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:144px;
+height:144px;
+}
+
+.crencas_wicca041 {
+background-image:url(ilust2944/wicca_deusa26.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:179px;
+height:227px;
+}
+.crencas_wicca042 {
+background-image:url(ilust2944/wicca_deus26.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:100px;
+height:207px;
+}
+
+
+.crencas_wicca05 {
+background-image:url(ilust2944/wicca_fogueira26.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:156px;
+}
+
+.crencas_wicca09 {
+background-image:url(ilust2944/wicca-halloween33.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:150px;
+}
+
+.crencas_wicca10 {
+background-image:url(ilust2944/wicca-wiccaning.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:313px;
+height:239px;
+}
+
+.espiritismo1 {
+background-image:url(ilust2944/kardec438906.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:20px;
+width:100px;
+height:133px;
+}
+.espiritismo7 {
+background-image:url(ilust2944/umbral664345.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:20px;
+width:250px;
+height:251px;
+}
+
+.espiritismo9 {
+background-image:url(ilust2944/chico_xavier1.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:20px;
+width:200px;
+height:231px;
+}
+
+.espiritismo10 {
+background-image:url(ilust2944/chico_xavier021.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:132px;
+}
+
+.hist_alem01 {
+background-image:url(ilust2944/loira30.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:72px;
+height:100px;
+}
+
+.hist_alem02 {
+background-image:url(ilust2944/tres_solt238.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:308px;
+height:210px;
+}
+
+.hist_alem031 {
+background-image:url(ilust2944/exorcista014.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:103px;
+}
+
+.hist_alem032 {
+background-image:url(ilust2944/exorcista024.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:96px;
+}
+
+
+.hist_alem033 {
+background-image:url(ilust2944/exorcista034.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:113px;
+}
+
+
+.hist_alem041 {
+background-image:url(ilust2944/neworleans023.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:135px;
+}
+
+.hist_alem042 {
+background-image:url(ilust2944/neworleans013.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:197px;
+}
+
+.hist_alem051 {
+background-image:url(ilust2944/cam_ness77.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:100px;
+height:75px;
+}
+
+.hist_alem052 {
+background-image:url(ilust2944/cam_biblio77.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:100px;
+height:82px;
+}
+
+.hist_alem053 {
+background-image:url(ilust2944/cam_ovni77.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:100px;
+height:75px;
+}
+
+.hist_alem061 {
+background-image:url(ilust2944/polterg018.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:140px;
+height:200px;
+}
+
+
+.hist_alem062 {
+background-image:url(ilust2944/polterg028.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:100px;
+height:128px;
+}
+
+.hist_alem08 {
+background-image:url(ilust2944/combust43.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:135px;
+height:130px;
+}
+
+
+
+
+
+
+
+
+.hist_alem091 {
+background-image:url(ilust2944/misterio062.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:180px;
+}
+
+.hist_alem092 {
+background-image:url(ilust2944/misterio012.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:215px;
+}
+
+
+.hist_alem093 {
+background-image:url(ilust2944/misterio022.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:179px;
+}
+
+.hist_alem094 {
+background-image:url(ilust2944/misterio032.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:220px;
+}
+
+.hist_alem095 {
+background-image:url(ilust2944/misterio042.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:200px;
+}
+
+.hist_alem096 {
+background-image:url(ilust2944/misterio082.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:200px;
+}
+
+
+.hist_alem101 {
+background-image:url(ilust2944/jack023.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:153px;
+height:124px;
+}
+
+.hist_alem102 {
+background-image:url(ilust2944/jack013.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:79px;
+height:106px;
+}
+
+.hist_alem111 {
+background-image:url(ilust2944/hell018.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:150px;
+}
+
+.hist_alem112 {
+background-image:url(ilust2944/hell028.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:60px;
+height:92px;
+}
+
+.hist_alem12 {
+background-image:url(ilust2944/bermuda7.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:100px;
+}
+
+.hist_alem13 {
+background-image:url(ilust2944/bermudas027.gif);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:275px;
+height:155px;
+}
+
+.hist_alem141 {
+background-image:url(ilust2944/necronom018.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:100px;
+height:138px;
+}
+
+.hist_alem142 {
+background-image:url(ilust2944/necronom028.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:100px;
+height:175px;
+}
+
+.hist_alem151 {
+background-image:url(ilust2944/ectop014.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:118px;
+height:200px;
+}
+
+.hist_alem152 {
+background-image:url(ilust2944/ecto024.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:182px;
+height:200px;
+}
+
+.hist_alem153 {
+background-image:url(ilust2944/ectop034.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:138px;
+height:200px;
+}
+
+.hist_alem161 {
+background-image:url(ilust2944/misterio20_019.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:226px;
+}
+
+.hist_alem162 {
+background-image:url(ilust2944/misterio20_029.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:226px;
+}
+
+.hist_alem163 {
+background-image:url(ilust2944/misterio20_039.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:152px;
+height:226px;
+}
+
+.hist_alem164 {
+background-image:url(ilust2944/misterio20_049.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:190px;
+height:226px;
+}
+
+.hist_alem165 {
+background-image:url(ilust2944/misterio20_059.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:236px;
+height:226px;
+}
+
+.hist_alem166 {
+background-image:url(ilust2944/misterio20_069.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:148px;
+height:226px;
+}
+
+.hist_alem167 {
+background-image:url(ilust2944/misterio20_079.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:236px;
+height:226px;
+}
+
+.hist_alem17 {
+background-image:url(ilust2944/exorcista014.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:103px;
+}
+
+
+.hist_alem181 {
+background-image:url(ilust2944/vlad013.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:229px;
+}
+
+.hist_alem182 {
+background-image:url(ilust2944/vlad023.gif);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:285px;
+}
+
+.hist_alem19 {
+background-image:url(ilust2944/michael_oracao78.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:214px;
+height:304px;
+}
+
+.hist_alem20 {
+background-image:url(ilust2944/galeria_maldita89.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:232px;
+}
+
+
+
+.hist_alem211 {
+background-image:url(ilust2944/tort_museu014.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:219px;
+}
+
+.hist_alem212 {
+background-image:url(ilust2944/tort_museu024.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:307px;
+height:135px;
+}
+
+.hist_alem213 {
+background-image:url(ilust2944/tort_museu034.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:220px;
+}
+
+.hist_alem214 {
+background-image:url(ilust2944/tort_museu044.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:261px;
+height:143px;
+}
+
+.hist_alem215 {
+background-image:url(ilust2944/tort_museu054.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:132px;
+}
+
+.hist_alem216 {
+background-image:url(ilust2944/tort_museu064.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:100px;
+height:200px;
+}
+
+.hist_alem217 {
+background-image:url(ilust2944/tort_museu074.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:150px;
+}
+
+.hist_alem218 {
+background-image:url(ilust2944/tort_museu084.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:350px;
+height:150px;
+}
+
+.hist_alem219 {
+background-image:url(ilust2944/tort_museu094.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:280px;
+height:150px;
+}
+
+.hist_alem2199 {
+background-image:url(ilust2944/tort_museu104.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:100px;
+}
+
+.hist_alem22 {
+background-image:url(ilust2944/necromancia86549.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:210px;
+}
+
+.hist_alem231 {
+background-image:url(ilust2944/misterio30_017.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:226px;
+}
+
+.hist_alem232 {
+background-image:url(ilust2944/misterio30_027.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:226px;
+}
+
+.hist_alem233 {
+background-image:url(ilust2944/misterio30_037.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:226px;
+}
+
+.hist_alem234 {
+background-image:url(ilust2944/misterio30_047.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:226px;
+}
+
+.hist_alem235 {
+background-image:url(ilust2944/misterio30_057.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:226px;
+}
+
+.hist_alem236 {
+background-image:url(ilust2944/misterio30_067.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:226px;
+}
+
+.hist_alem237 {
+background-image:url(ilust2944/misterio30_087.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:226px;
+}
+
+.hist_alem24 {
+background-image:url(ilust2944/sasquatch35.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:194px;
+height:226px;
+}
+
+
+.hist_alem261 {
+background-image:url(ilust2944/misterio40_013.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:201px;
+}
+
+.hist_alem262 {
+background-image:url(ilust2944/misterio40_023.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:223px;
+}
+
+.hist_alem263 {
+background-image:url(ilust2944/misterio40_033.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:220px;
+}
+
+.hist_alem264 {
+background-image:url(ilust2944/misterio40_043.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:249px;
+}
+
+.hist_alem265 {
+background-image:url(ilust2944/misterio40_053.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:294px;
+}
+
+.hist_alem266 {
+background-image:url(ilust2944/misterio40_063.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:200px;
+}
+
+.hist_alem267 {
+background-image:url(ilust2944/misterio40_0713.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:202px;
+}
+
+.hist_alem268 {
+background-image:url(ilust2944/misterio40_0723.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:202px;
+}
+
+.hist_alem269 {
+background-image:url(ilust2944/misterio40_0813.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:225px;
+}
+
+.hist_alem2699 {
+background-image:url(ilust2944/misterio40_0823.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:225px;
+}
+
+.hist_alem27 {
+background-image:url(ilust2944/profecia_filme66.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:100px;
+height:200px;
+}
+
+.hist_alem28 {
+background-image:url(ilust2944/martinelli43.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:200px;
+}
+
+.hist_alem29 {
+background-image:url(ilust2944/ouija42.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:150px;
+}
+.hist_alem30 {
+background-image:url(ilust2944/ouija024.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:220px;
+height:150px;
+}
+
+.hist_alem331 {
+background-image:url(ilust2944/psicofonias-03.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:150px;
+}
+
+.hist_alem332 {
+background-image:url(ilust2944/psicofonias-01.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:212px;
+}
+
+.hist_alem333 {
+background-image:url(ilust2944/psicofonias-02.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:137px;
+}
+.hist_alem34 {
+background-image:url(ilust2944/robert-johnson.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:155px;
+}
+
+.hist_alem35 {
+background-image:url(ilust2944/luto-tam.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:200px;
+}
+
+.hist_alem36 {
+background-image:url(ilust2944/ouija43.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:100px;
+}
+
+.hist_alem37 {
+background-image:url(ilust2944/carta_previsao_acidente.gif);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:600px;
+height:920px;
+}
+
+.hist_alem38-01-01 {
+background-image:url(ilust2944/misterio-04-06-01.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:250px;
+height:186px;
+}
+
+.hist_alem38-01-02 {
+background-image:url(ilust2944/misterio-04-06-02.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:250px;
+height:186px;
+}
+
+.hist_alem38-01-03 {
+background-image:url(ilust2944/misterio-04-04-01.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:297px;
+}
+
+.hist_alem38-01-04 {
+background-image:url(ilust2944/misterio-04-04-02.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:204px;
+}
+.hist_alem38-01-05 {
+background-image:url(ilust2944/misterio-04-03-01.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:175px;
+}
+
+.hist_alem38-01-06 {
+background-image:url(ilust2944/misterio-04-03-02.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:175px;
+}
+
+.hist_alem38-01-07 {
+background-image:url(ilust2944/misterio-04-01-01.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:138px;
+}
+.hist_alem38-01-08 {
+background-image:url(ilust2944/misterio-04-01-02.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:138px;
+}
+.hist_alem38-01-09 {
+background-image:url(ilust2944/misterio-04-01-03.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:138px;
+}
+.hist_alem38-01-10 {
+background-image:url(ilust2944/misterio-04-01-04.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:138px;
+}
+.hist_alem38-01-11 {
+background-image:url(ilust2944/misterio-04-02.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:288px;
+}
+.hist_alem38-01-12 {
+background-image:url(ilust2944/misterio-04-05.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:263px;
+}
+
+.historic_site01 {
+background-image:url(ilust2944/hist_first02.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:149px;
+float:left;
+}
+
+.historic_site02 {
+background-image:url(ilust2944/hist_first01.gif);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:149px;
+float:left;
+}
+
+.historic_site03 {
+background-image:url(ilust2944/hist_second01.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:149px;
+float:left;
+}
+
+.historic_site04 {
+background-image:url(ilust2944/hist_third.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:149px;
+float:left;
+}
+
+.text-clear {
+clear:left;}
+
+.nostradamus1 {
+background-image:url(ilust2944/menu04.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:80px;
+height:124px;
+}
+
+.nostradamus2 {
+background-image:url(ilust2944/nostrad_eclipse.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:140px;
+height:160px;
+}
+
+.nostradamus04 {
+background-image:url(ilust2944/hitler014.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:100px;
+height:120px;
+}
+
+.nostradamus05 {
+background-image:url(ilust2944/nostrad018.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:130px;
+height:170px;
+}
+
+.nostradamus06 {
+background-image:url(ilust2944/nostra_copa61.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:170px;
+}
+
+.nostradamus07 {
+background-image:url(ilust2944/nostra_aster014.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:100px;
+height:150px;
+}
+
+.nostradamus08 {
+background-image:url(ilust2944/iraq_guerra15.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:150px;
+}
+
+.nostradamus09 {
+background-image:url(ilust2944/nostra_falsas54.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:143px;
+height:189px;
+}
+
+.nostradamus10 {
+background-image:url(ilust2944/nostra_terceira98.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:150px;
+}
+
+.persona011 {
+background-image:url(ilust2944/kock01.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:180px;
+}
+
+.persona012 {
+background-image:url(ilust2944/kock02.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:180px;
+height:220px;
+}
+
+.persona013 {
+background-image:url(ilust2944/kock03.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:130px;
+height:230px;
+}
+
+.persona014 {
+background-image:url(ilust2944/kock04.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:150px;
+}
+
+.persona015 {
+background-image:url(ilust2944/kock05.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:180px;
+height:180px;
+}
+
+.persona02 {
+background-image:url(ilust2944/idi-amin.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:160px;
+}
+
+.profecias02 {
+background-image:url(ilust2944/prof44.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:244px;
+height:132px;
+}
+
+.profecias03 {
+background-image:url(ilust2944/daniel021.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:300px;
+}
+
+.profecias04 {
+background-image:url(ilust2944/cavaleiros012.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:177px;
+}
+
+
+.profecias051 {
+background-image:url(ilust2944/sudario18.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:350px;
+height:92px;
+}
+
+.profecias052 {
+background-image:url(ilust2944/sudario28.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:100px;
+height:134px;
+}
+
+.profecias07 {
+background-image:url(ilust2944/profec_jesus68.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:100px;
+height:173px;
+}
+
+
+.profecias081 {
+background-image:url(ilust2944/noe017.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:73px;
+}
+
+.profecias082 {
+background-image:url(ilust2944/noe027.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:90px;
+}
+.profecias083 {
+background-image:url(ilust2944/noe037.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:97px;
+}
+
+.profecias091 {
+background-image:url(ilust2944/maravilhas013.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:121px;
+}
+.profecias092 {
+background-image:url(ilust2944/maravilhas023.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:121px;
+}
+.profecias093 {
+background-image:url(ilust2944/maravilhas033.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:121px;
+}
+.profecias094 {
+background-image:url(ilust2944/maravilhas043.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:121px;
+}
+.profecias095 {
+background-image:url(ilust2944/maravilhas053.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:121px;
+}
+.profecias096 {
+background-image:url(ilust2944/maravilhas063.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:121px;
+}
+.profecias097 {
+background-image:url(ilust2944/maravilhas073.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:121px;
+}
+
+.profecias11 {
+background-image:url(ilust2944/crowley24.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:149px;
+height:143px;
+}
+
+.profecias121 {
+background-image:url(ilust2944/stigmata016.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:133px;
+}
+
+.profecias122 {
+background-image:url(ilust2944/stigmata026.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:130px;
+height:138px;
+}
+
+.profecias123 {
+background-image:url(ilust2944/stigmata036.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:130px;
+height:153px;
+}
+
+.profecias14 {
+background-image:url(ilust2944/daniel_bode88.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:208px;
+height:137px;
+}
+
+.profecias16 {
+background-image:url(ilust2944/cayce45.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:74px;
+height:109px;
+}
+
+.profecias17 {
+background-image:url(ilust2944/hercules90.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:133px;
+}
+
+.profecias18 {
+background-image:url(ilust2944/rasputin36.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:100px;
+height:175px;
+}
+
+.profecias19 {
+background-image:url(ilust2944/graal018.gif);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:123px;
+height:208px;
+}
+
+.profecias201 {
+background-image:url(ilust2944/mar_morto013.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:286px;
+height:180px;
+}
+
+.profecias202 {
+background-image:url(ilust2944/mar_morto026.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:198px;
+}
+
+.profecias21 {
+background-image:url(ilust2944/relogio_fim46.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:197px;
+}
+
+.profecias22 {
+background-image:url(ilust2944/daniel_semanas32.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:250px;
+height:200px;
+}
+
+.profecias23 {
+background-image:url(ilust2944/guerra79.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:170px;
+}
+
+.profecias24 {
+background-image:url(ilust2944/prof_nuclear47.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:160px;
+}
+
+
+.profecias25 {
+background-image:url(ilust2944/biohazard25.gif);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:150px;
+}
+
+.profecias26 {
+background-image:url(ilust2944/malaquias88.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:250px;
+}
+
+.profecias27 {
+background-image:url(ilust2944/misterio20_079.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:237px;
+height:226px;
+}
+
+.profecias28 {
+background-image:url(ilust2944/maia66.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:200px;
+}
+
+.profecias29 {
+background-image:url(ilust2944/katharina.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:120px;
+height:160px;
+}
+.profecias30 {
+background-image:url(ilust2944/katharina02.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:250px;
+}
+
+.profecias31  {
+background-image:url(ilust2944/tsunami.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:120px;
+}
+.profecias32  {
+background-image:url(ilust2944/fim-dos-tempos.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:120px;
+}
+
+
+.public01 {
+background-image:url(ilust2944/publi_premio.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:134px;
+}
+
+.public02 {
+background-image:url(ilust2944/publi04.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:100px;
+height:143px;
+}
+
+.public03 {
+background-image:url(ilust2944/publi03.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:100px;
+height:143px;
+}
+
+.public04 {
+background-image:url(ilust2944/publi02.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:100px;
+height:143px;
+}
+.public05 {
+background-image:url(ilust2944/publi01.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:100px;
+height:143px;
+}
+
+
+.ufologia09 {
+background-image:url(ilust2944/ovni057.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:126px;
+}
+
+.ufologia10 {
+background-image:url(ilust2944/ashtar88.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:100px;
+height:143px;
+}
+
+.ufologia121 {
+background-image:url(ilust2944/et_varginha018.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:150px;
+height:199px;
+}
+
+.ufologia122 {
+background-image:url(ilust2944/et_varginha029.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:210px;
+height:156px;
+}
+
+.ufologia131 {
+background-image:url(ilust2944/area51_015.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:300px;
+height:163px;
+}
+.ufologia132 {
+background-image:url(ilust2944/area51_026.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:162px;
+}
+
+.ufologia18 {
+background-image:url(ilust2944/et_varginha034.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:200px;
+height:200px;
+}
+
+.ufologia201 {
+background-image:url(ilust2944/ufo_real01.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:469px;
+height:304px;
+}
+.ufologia202 {
+background-image:url(ilust2944/ufo_real02.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:439px;
+height:351px;
+}
+.ufologia203 {
+background-image:url(ilust2944/ufo_real03.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:472px;
+height:314px;
+}
+.ufologia204 {
+background-image:url(ilust2944/ufo_real04.jpg);
+background-repeat:no-repeat;
+background-position:center;
+margin:10px;
+width:420px;
+height:287px;
+}
+
+

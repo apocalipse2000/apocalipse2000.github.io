@@ -1,0 +1,233 @@
+body{
+	font-size:20pt;
+}
+
+.menuleft,
+.anuncio,
+.anuncio03,
+.skip-menu,
+.box-right,
+.corner-right-top,
+.protege,
+.quebra-inv,
+h1 img,
+.validator,
+label[for="busca"],
+.bookmarks-int,
+.bookmarks-1,
+.bookmarks-home,
+hr.chamadas-home,
+.titulos,
+.destaques-home,
+.facebook{
+	display:none;
+}
+
+
+.titulos-profecias,
+.titulos-nostradamus,
+.titulos-medo,
+.titulos-hist-alem,
+.titulos-persona,
+.titulos-ouija,
+.titulos-contos,
+.titulos-crencas,
+.titulos-wicca,
+.titulos-biblia,
+.titulos-espiritismo,
+.titulos-reiki,
+.titulos-ufologia,
+.titulos-cinema,
+.titulos-links,
+.titulos-compras,
+.titulos-livros,
+.titulos-dvds,
+.titulos-contato,
+.titulos-historico,
+.titulos-literatura,
+.titulos-muro,
+.titulos-multimidia,
+.chamada-main{
+	background-image: none;
+	left:10px;
+	width:300px;
+}
+
+
+h1.logo{
+	background:url(images/logo-mobile.jpg) no-repeat #000;
+	height:84px;
+	margin:0px;
+	padding:0px;
+	width:200px;
+}
+
+body{
+	background:url(images/fundo-mobile.jpg) repeat-x;
+	margin:0px;
+	padding:0px;
+	font-family:Verdana, Geneva, sans-serif;
+	color:#000;
+	font-size:0.8em;
+}
+
+.conteudo{
+	padding:10px;
+	
+}
+
+.central-right,
+.central-left,
+.rodape-left,
+.rodape,
+.rodape-right,
+.chamada-main{
+background-image: none;
+margin:0px;
+padding:0px;
+}
+
+.rodape-left
+.rodape,
+.rodape-right{
+	height:0px;
+	
+}
+
+
+a.main:link,
+a:link{
+   color: #03C; 
+   text-decoration:    none;
+   
+}
+
+a.main,
+a{  
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+color: #03C; 
+text-decoration: none;
+
+}
+
+
+a.main:hover,
+a:hover{
+   color: #06F; 
+   text-decoration: underline;
+}
+
+.busca{
+top:77px; 
+
+}
+
+h3.bookmarks{
+	background-color: #000;
+	color: #FFF;
+	margin:0px;
+	
+}
+
+.li-links-arquivo,{
+	margin-left: 10px;
+}
+
+.destaque-interna-central{
+	margin-left: 0px;
+	margin-bottom:10px;
+	width: auto;
+}
+
+div.chamadas-home{
+font-size:11px;
+border:1px solid black;
+margin-left:10px;
+background-color:#000;
+background-image:none;
+padding:10px;
+min-height:100px;
+}
+
+
+div.chamadas-home a.main:link{
+   color: #FFF; 
+   text-decoration:    none;
+   font-size:          8pt;
+   
+}
+
+div.chamadas-home a.main{  
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+color: #FFF; 
+text-decoration: none;
+font-size:          8pt;
+
+}
+
+
+div.chamadas-home a.main:hover{
+   color: #FFC; 
+   text-decoration: underline;
+}
+
+
+img.chamadas-home{
+float:left;
+padding-right:10px;
+}
+h2.chamadas-home{
+color:#FF9900;
+font-size:14px;
+}
+
+
+div.destaques-home{
+margin-left:220px;
+border:1px solid black;
+min-height:150px;
+}
+img.destaques-home{
+margin-right:30px;
+
+}
+
+.arquivo{
+	background-image:none;
+	height:15px;
+	margin-left:10px;
+	color:#FFF;
+	background-color:#000;
+	padding:3px;
+	
+}
+
+.anuncio02{
+	margin-left:0px;
+	
+}
+
+.clear-top{
+margin-top:20px;
+
+}
+
+.topo-site{
+	width:1px;
+	
+}
+
+.chamada-main{
+	margin-bottom:10px;
+	padding:5px;
+	width:100%;
+	border:1px solid black;}
+	
+.anuncio-conto{
+	color:#FFFFFF;
+}
+
+.anuncio-conto a{
+	color:#FFFFFF;
+	text-decoration:underline;
+}
