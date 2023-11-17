@@ -1,0 +1,411 @@
+﻿
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+  
+   body{
+padding-top: 250px;
+background: black;
+min-width:300px;
+}
+
+
+a{
+	color: rgb(55,0,0);
+	text-decoration:underline;
+
+}
+
+.navbar-inverse .navbar-inner{
+	background:black;
+	background-image: url(../img/fundo-top.jpg), url(../img/fundo-top2.jpg);
+	background-repeat:no-repeat, no-repeat;
+	background-position:top left, top right;
+}
+
+hr{
+	border:1px solid #000;
+}
+h1.logo   {
+  	margin-left:auto;
+	margin-right:auto;
+	margin-bottom: 10px;
+	text-align:center;
+}	
+img.logo{
+
+}
+
+.navbar .container{
+padding: 30px 0px 0px 10px;
+}
+.nav{
+/*	background:url(../img/nav.png) repeat-x top right #333; */
+	border-radius:10px;
+	margin-bottom: 30px;
+	}
+.navbar .nav{
+margin-left: auto;
+margin-right: auto;
+margin: 0px;
+}
+
+.navbar-inverse .brand, .navbar-inverse .nav > li > a{
+color: white;
+}
+
+.navbar-inverse .brand, .navbar-inverse .nav > li > a:hover{
+color: yellow;
+}
+
+.hero-unit {
+	padding:40px;
+}
+.hero-unit h1{
+	background:url(../img/img-headers2.jpg) no-repeat top left;
+	color:#FFF;
+	padding:10px 0px 10px 40px;
+	margin-top:0px;
+	font-size: 1.2em;
+	white-space: normal;
+
+	}
+
+.hero-unit h2{
+	background:url(../img/img-headers2.jpg) no-repeat top left;
+	color:#FFF;
+	font-weight:bold;
+	padding:5px 0px 0px 40px;
+	margin:10px 10px 10px 0px;
+	height:40px;
+	font-size: 1em;
+
+}
+
+.hero-unit h1 a,
+.hero-unit h2 a{
+	color:#FFF;
+	text-decoration:none;
+
+}
+
+.row .span4 img{
+	float:left;
+	margin:0px 10px 10px 10px;
+}
+
+footer{
+	text-align:center;
+}
+
+.twitter-follow-button{
+	float:right;
+	margin:5px;
+}
+
+.fb-like{
+	float:left;
+	margin:5px;
+}
+
+.facebook{
+	background:#FFF;
+	width:234px;
+	height:250px;
+}
+
+p.right{
+	text-align:right;
+}
+
+
+img.chamadas-home{
+float:left;
+padding-right:10px;
+margin-top:5px;
+margin-bottom:35px;
+}
+
+h2.chamadas-home{
+	clear:left;
+}
+
+
+.ilustracoes{
+margin:10px;
+float:left;
+}
+
+.ilustracoes-nf{
+margin:10px;
+}
+
+.clear{
+	clear:both;
+}
+
+
+.banner-medob{
+	background:url(../img/medob.jpg);
+	width:234px;
+	height:60px;
+}
+
+li.li-links-arquivo a.main:before{
+content:"† ";
+}
+
+li.li-links-arquivo{
+	list-style:none;
+}
+
+/* ---------Tabua ouija---------- */
+
+#planchette {
+  position: absolute;
+  visibility: hidden;
+}
+
+.ouija-f{
+border: 0px solid white;
+}
+
+.anuncio-ouija{
+background-color:#000000;
+margin-left:200px;
+}
+
+@media(max-width:480px){
+   body{
+padding-top: 0px;
+} 
+.row .span4 img{
+	float:none;
+	margin:0px 10px 10px 10px;
+}
+}
+
+aside.archive h3{
+	background:url(../img/img-headers2.jpg) no-repeat top left;
+	color:#FFF;
+	font-weight:bold;
+	padding:5px 0px 0px 0px;
+	text-align:center;
+	margin:10px 10px 10px 0px;
+	height:40px;
+
+}
+
+
+/* aside */
+aside.related{
+	float:left;
+	color:#FFF;
+/*	margin-left:10px; */
+}
+
+aside.related a{
+	color:#FFF;
+}
+aside.related p{
+	background:url(images/img-headers2.jpg) no-repeat top left;
+	color:#FFF;
+	font-weight:bold;
+	padding:5px 0px 0px 0px;
+	text-align:center;
+	margin:10px 0px 10px 0px;
+	height:25px;
+
+}
+
+aside.related .busca{
+	margin-bottom:10px;
+}
+
+aside.related .anuncio{
+	padding-left:50px;
+}
+aside.related img{
+	display:block;
+	margin-bottom:10px;
+}
+
+
+
+aside.related ul li a:before
+{ 
+content:"† ";
+}
+
+
+
+aside.related ul
+{
+	padding-left:15px;
+	margin-left:0px;
+}
+
+
+
+aside.related ul li
+{
+	background:url(../img/background-headers2.jpg);
+	margin-bottom:2px;
+	list-style:none;
+	padding:5px;
+	margin-right:10px;
+}
+
+
+aside.related ul li:hover
+{
+	background-image:none;
+	background-color:#036;
+
+}
+
+ul.menu-podcasts li{
+	list-style:none;
+	display:inline-block;
+	text-align:center;
+	margin-bottom:30px;
+	vertical-align:top;
+}
+
+ul.menu-podcasts li img{
+	border:1px solid white;
+}
+
+ul.menu-podcasts li a{
+	text-decoration:none;
+}
+
+ul.menu-podcasts li a:hover{
+	text-decoration:underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 480px) {
+   body{
+padding-top: 0px;
+} 
+.row .span4 img{
+	float:none;
+  }
+  aside.related{
+  margin-left: auto;
+  margin-right:auto;
+  float:none;
+  width:300px;
+  }
+  }
+  
+  
+@media (max-width: 767px)  {
+   body{
+padding-top: 0px;
+} 
+.row .span4 img{
+	float:left;
+  }
+    aside.related{
+  margin-left: auto;
+  margin-right:auto;
+  display:block;
+  }
+  } 
+
+@media (max-width: 979px) and (min-width: 768px){
+.span4{
+	width:290px;
+  }
+  .row .span4 img{
+	float:left;
+  }
+  
+}
+
+@media (min-width: 979px){
+   body{
+padding-top: 200px;
+} 
+
+.span4{
+	width:500px;
+  }
+  .row .span4 img{
+	float:left;
+  }
+  
+  
+  .hero-unit{
+float:left;
+margin-right:20px;
+margin-left:30px;
+width:500px;
+}
+
+
+    aside.related{
+width:auto;
+  float:left;
+  }
+
+  }
+
+@media (min-width: 1200px){
+   body{
+padding-top: 200px;
+} 
+
+.span4{
+	width:330px;
+  }
+  
+  .navbar .nav{
+padding-left:100px;
+}
+
+.row .span4 img{
+	float:left;
+  }
+.hero-unit{
+float:left;
+margin-right: 20px;
+width:700px;
+}
+
+.container{
+width:1200px;
+}
+
+  aside.related{
+  float:left;
+  width:auto;
+  }
+
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+<title>Jogo do copo</title>
+
+<style>
+body{
+	background:url(img/board.jpg) no-repeat black;
+}
+
+form{
+	margin-top:130px;
+	margin-left:150px;
+}
+
+input[id="pray"]{
+	font-size:1.2em;
+	border:none;
+	background-color:transparent;
+	border:0px;
+	padding:5px;
+	-webkit-transition:background-color 2s;
+	
+}
+
+input[id="backup"] {
+	display:none;
+	
+}
+
+input:focus{
+	-webkit-animation:bgform 2s infinite;
+	border-color:transparent;
+}
+
+label{
+	display:block;
+}
+a#pointer{
+display: block;
+position: absolute;
+-webkit-animation:shake 20ms infinite;
+}
+
+div{
+position: relative;
+width: 200px;
+height: 200px;
+left:230px;
+top: 120px;
+}
+
+
+@-webkit-keyframes bgform {
+  0% {
+	  background:transparent;
+	  -webkit-transition:background-color 2s;
+  }
+  50%{
+	  background:#FFF;
+	   -webkit-transition:background-color 2s;
+  }
+   100% {
+	  background:transparent;
+	  -webkit-transition:background-color 2s;
+  }
+}
+
+@-webkit-keyframes go {
+  0% {  
+	left:230px;
+  }
+  30% {
+    left:437px;
+  }
+  70% {
+    left:437px;
+  }
+  100% {
+    left:230px;
+  }
+}
+
+@-webkit-keyframes go2 {
+    0% {  
+	left:230px;
+  }
+  30% {
+    left:17px;
+  }
+  70% {
+    left:17px;
+  }
+  100% {
+    left:230px;
+  }
+}
+
+@-webkit-keyframes back {
+  from {
+    left: 500px;
+  }
+  to {
+    left:200px;
+  }
+}
+@-webkit-keyframes back2 {
+  from {
+    left: 300px;
+  }
+  to {
+    left:200px;
+  }
+}
+
+@-webkit-keyframes backghost {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes shake {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(3deg);
+  }
+}
+</style>
+
+</head>
+<body>
+<div>
+<a href="#" id="pointer"><img src="img/planchette.gif" alt="Clique para ter sua resposta"></a>
+</div>
+
+<form name="form" method="get">
+<label for="pray">Digite sua pergunta e toque na prancheta</label>
+ <input type="text" id="pray" name="pray" size=20 autofocus>
+ <input type="text" id="backup" name="backup" size=20>
+<script>
+
+var a = document.querySelector('#pointer');
+a.onclick = function() { 
+document.form.backup.value = document.form.pray.value;
+    if (document.form.pray.value == "") {
+        document.querySelector('div').style.webkitAnimation = 'backghost 0.5s',
+		alert('Faça uma pergunta');
+		document.form.pray.focus();
+        return false;
+	}
+	if (document.form.pray.value.indexOf('?') === -1){
+        document.querySelector('div').style.webkitAnimation = 'backghost 0.5s',
+		alert('falta interrogação');
+		document.form.pray.focus();
+        return false;
+	}
+
+	else {
+var vai = ['go 5s', 'go2 5s'];
+var vaiview = vai[Math.floor(Math.random()*vai.length)];
+document.querySelector('div').style.webkitAnimation = vaiview;
+setTimeout(function () {document.form.pray.value = ""}, 5000);
+	}
+};
+
+var c = document.querySelector('#pray');
+c.onclick = function() { 
+document.querySelector('div').style.webkitAnimation = 'backghost 0.5s'
+};
+
+</script>
+</body>
+</html>

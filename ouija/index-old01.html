@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1011443-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-1011443-1');
+</script>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> 
+<link rel="apple-touch-icon" href="images/hello-icon-152.png">   
+<meta name="theme-color" content="black"/>  
+<meta name="apple-mobile-web-app-capable" content="yes">  
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+<meta name="apple-mobile-web-app-title" content="Jogo do copo online"> 
+<meta name="msapplication-TileImage" content="images/icon-144.png">  
+<meta name="msapplication-TileColor" content="#FFFFFF">
+
+<meta name="description" content="Você tem coragem de fazer perguntas para o espírito do tabuleiro? Apocalipse2000 -  Desde 1998 aterrorizando a internet. O tabuleiro virtual de OUIJA, as mais assustadoras histórias de terror, contos, profecias, espiritismo, a bíblia sagrada e muito mais.">
+        <meta name="keywords" content="apocalipse, mortes, guerra, ovni, OVNI, ovnis, nostradamus, deus, jesus, biblia, santo, cruz, lucifer, demonio, destruicao, mundo, paz, profecias, bill gates, fatima, segredo, fim do mundo, fim, armagedom, cavaleiros, freddy, krueger, pesadelo, além, alem, histórias, historias, ouija, medo, loira, banheiro, fantsma, fantasmas, criaturas, nightmare, kardek, Kardek, wicca, magia, bruxaria, negra, copo, fotos, jogo do copo">
+<meta property="og:url" content="https://apocalipse20001.websiteseguro.com/ouija/">
+<meta property="og:title" content="Tabua OUIJA Virtual  - O Jogo do Copo - Apocalipse2000">
+<meta property="og:image" content="https://apocalipse20001.websiteseguro.com/ouija/images/ouija-og-image.png">
+<meta property="og:description" content="Você tem coragem de fazer perguntas para o espírito do tabuleiro?">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Você tem coragem de fazer perguntas para o espírito do tabuleiro?">
+<meta name="twitter:title" content="Tabua OUIJA Virtual  - O Jogo do Copo - Apocalipse2000">
+<meta name="twitter:site" content="@ana_ouija">
+<meta name="twitter:image" content="https://apocalipse20001.websiteseguro.com/ouija/images/ouija-og-image.png">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+<script type="text/javascript" src="js/script.js"></script>
+
+<title> Tabua OUIJA Virtual  - O Jogo do Copo - Apocalipse2000</title>
+
+    </head>
+    <body class="fullscreen">
+<script type="text/javascript">
+ window.onorientationchange = function() { 
+        var orientation = window.orientation; 
+            switch(orientation) { 
+                case 0:
+                case 90:
+                case -90: window.location.reload(); 
+                break; } 
+    };
+</script>
+<a href="javascript:void(0);" onclick="goodbye()" id="scary" style="display:none;"><img src="images/scary-girl.gif" alt="Foto da Ana"> <span> Não vá embora agora. <br>&nbsp;&nbsp;&nbsp;&nbsp;Fique mais um pouco...</span></a>
+<div class="container">
+<h1>O tabuleiro OUIJA</h1>
+
+<div id="planchette">
+<!-- pointer image with imagemap outlining the shape, allows -->
+<!-- script to detect when mouse is over the pointer         -->
+<img src="images/planchette.gif" width="150" height="200" usemap="#planchetteMap" alt="">
+<map id="planchetteMap" name="planchetteMap">
+<area shape="poly"
+	coords="075,005,115,075,140,180,115,195,075,190,035,195,010,180,035,075"
+	href="#"
+	alt=""
+	onmouseover="handsOn()"
+	onmouseout="handsOff()"
+	onclick="return false">
+</map>
+</div>
+ 
+
+<form action="" onSubmit="consult(); return false;">
+<span class="disclaimer">Digite sua pergunta e pressione "perguntar". <br>
+Toque o centro da prancheta para revelar a resposta.</span>
+<ul>
+<li><label class="block" for="question">Faça uma pergunta: </label><input id="question" name="question" type="text" size="20">
+<input type="submit" value="Perguntar"> 
+<input type="reset" value="Apagar" onClick="abortReply(); return true;"></li>
+<li><input id="reply" name="reply" type="text" readonly size="30" aria-live="polite"></li>
+</ul>
+
+
+<img id="board" src="images/board.jpg" width="600" height="400" usemap="#boardMap" alt="">
+<map id="boardMap" name="boardMap">
+<area shape="rect" coords="185,345,413,367" href="javascript:void(0);" alt="Home" onclick="goodbye()">
+</map>
+
+<br>
+<br>
+
+</form>
+
+<ul class="menu">
+<li><a href="javascript:void(0);" onclick="esconde()">Quem responde as perguntas?</a></li>
+<li><a href="http://www.apocalipse2000.com.br">Feito por apocalipse2000.com.br</a></li>
+</ul> 
+
+<div class="container2">
+
+<div id="anaesc" style="display:none;">
+ <h2>Quem responde as perguntas?</h2>
+
+<img src="images/scary-girl.gif" alt="Foto da Ana" id="ana"><p>Ana foi morta pelo seu namorado durante uma briga em 2002. Ela prometeu vingança e busca se comunicar com o mundo dos vivos pela tábua OUIJA. Algumas vezes suas respostas podem não fazer muito sentido mas basta ser claro em suas perguntas que ela responderá de forma adequada.</p>
+
+<p>Cuidado com suas perguntas. Ninguém sabe o que uma alma rancorosa pode responder.</p>
+
+<p><a href="http://www.apocalipse2000.com.br/contos24.htm">Conheça sua história</a> e Acompanhe o <a href="http://twitter.com/Ana_Ouija">Twitter da Ana</a> </p>
+</div></div>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/ouija/sw.js')
+      .then(function () {
+        console.log('service worker registered');
+      })
+      .catch(function () {
+        console.warn('service worker failed');
+      });
+  }
+  function esconde() {
+  var esconder = document.getElementById("anaesc");
+  if (esconder.style.display === "none") {
+    esconder.style.display = "block";
+  } else {
+    esconder.style.display = "none";
+  }
+}
+
+  function goodbye() {
+  var adeus = document.getElementById("scary");
+  if (adeus.style.display === "none") {
+    adeus.style.display = "block";
+  } else {
+    adeus.style.display = "none";
+  }
+}
+</script>
+<noscript>JavaScript necessário</noscript>
+    </body>
+</html>
